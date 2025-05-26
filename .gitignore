@@ -1,5 +1,5 @@
-/.DS_Store
 /.vscode
+.DS_Store
+**/.DS_Store
 /node_modules
-/robots.txt
-/sitemap.xml
+*.zip
