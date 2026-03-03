@@ -6,8 +6,10 @@
   --white: #ffffff;
   --dark: #020202;
   --dark100: #161616;
-  --primary-font: "Syne", sans-serif;
-  --secondary-font: "swear-display", serif;
+  --primary-font: 'Syne', sans-serif;
+  --secondary-font: 'swear-display', serif;
+  --instrument-font: 'Instrument Serif', serif;
+  --geist-mono-font: 'Geist Mono', monospace;
 }
 
 *,
@@ -63,7 +65,7 @@ img {
   vertical-align: middle;
 }
 
-body[data-overflow="true"] {
+body[data-overflow='true'] {
   overflow: hidden;
 }
 
@@ -84,7 +86,7 @@ body {
 }
 
 .site-loader::before {
-  content: "";
+  content: '';
   position: absolute;
   left: calc(50% - 35px);
   top: calc(50% - 35px);
@@ -288,7 +290,7 @@ body {
   /* display: none; */
 }
 
-body[data-modal="true"] .site_menu_modal {
+body[data-modal='true'] .site_menu_modal {
   transform: translateY(0);
 }
 
@@ -588,7 +590,9 @@ body[data-modal="true"] .site_menu_modal {
     opacity: 1;
     scale: 1;
     z-index: 1;
-    transition: opacity 0.35s ease-in-out, scale 0.5s ease-in-out;
+    transition:
+      opacity 0.35s ease-in-out,
+      scale 0.5s ease-in-out;
     /* transition: opacity 0.2s cubic-bezier(0.68, -0.55, 0.27, 1.55), scale 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55); */
   }
 
