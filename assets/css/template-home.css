@@ -1350,14 +1350,14 @@ Featued Case study
   margin-bottom: 0;
   background-color: #fff;
   border-top-right-radius: 12px;
-  padding: 8px 4px 6px 4px;
+  padding: 8px 6px 6px 4px;
   max-width: var(--featured-case-study-card-tagline-max-width);
 }
 
 .featured-case-study-card-title {
   font-family: var(--instrument-font);
   font-weight: 400;
-  font-size: 78px;
+  font-size: 76px;
   line-height: 70px;
   letter-spacing: -0.4%;
   text-transform: uppercase;
@@ -1365,7 +1365,7 @@ Featued Case study
   background-color: #fff;
   margin-top: -2px;
   border-top-right-radius: 12px;
-  padding: 14px 18px 8px 2px;
+  padding: 14px 14px 8px 2px;
   max-width: var(--featured-case-study-card-title-max-width);
 }
 

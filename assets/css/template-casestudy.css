@@ -968,7 +968,6 @@ img {
   max-width: 310px;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
   position: relative;
   z-index: 3;
 }
@@ -1981,10 +1980,12 @@ body.recess .casestudy_featured_item img {
 
 .casestudy_cards .casestudy_card_image_1 {
   aspect-ratio: 1/1;
+  overflow: hidden;
 }
 
 .casestudy_cards .casestudy_card_image_2 {
   aspect-ratio: 1/0.75;
+  overflow: hidden;
 }
 
 .casestudy_cards.curaxcura-cards-2 .casestudy_card_image.with_padding {
