@@ -3317,6 +3317,7 @@ body.upbeat .casestudy_tagline_section {
 
 .casestudy_cards {
   aspect-ratio: 1 / 0.45;
+  overflow: hidden;
 }
 
 /* Recess */
