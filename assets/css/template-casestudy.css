@@ -1954,6 +1954,7 @@ body.recess .casestudy_featured_item img {
   line-height: 136%;
   color: #ffffe1;
   text-align: center;
+  padding-bottom: 6px;
 }
 
 .casestudy_card_image {
@@ -1978,6 +1979,14 @@ body.recess .casestudy_featured_item img {
   height: 100%;
 }
 
+.casestudy_cards .casestudy_card_image_1 {
+  aspect-ratio: 1/1;
+}
+
+.casestudy_cards .casestudy_card_image_2 {
+  aspect-ratio: 1/0.75;
+}
+
 .casestudy_cards.curaxcura-cards-2 .casestudy_card_image.with_padding {
   margin: 0;
   border-radius: 0;
@@ -1988,9 +1997,11 @@ body.recess .casestudy_featured_item img {
   border: none;
 }
 .casestudy_cards.curaxcura-cards-2 .casestudy_card_image {
-  aspect-ratio: 1/0.75;
+  aspect-ratio: 1/1.22;
   margin: 30px 38px;
   border-radius: 18px;
+  overflow: hidden;
+  border: none;
 }
 
 .casestudy_showcase .cards_wrapper {
@@ -2430,6 +2441,7 @@ body.recess .casestudy_featured_item img {
 
   .casestudy_cards_heading {
     font-size: 75px;
+    padding-bottom: 0;
   }
 
   .casestudy_card_image {
@@ -3315,9 +3327,8 @@ body.upbeat .casestudy_tagline_section {
   height: 100%;
 }
 
-.casestudy_cards {
+.cards_wrapper {
   aspect-ratio: 1 / 0.45;
-  overflow: hidden;
 }
 
 /* Recess */

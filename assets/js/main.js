@@ -116,7 +116,6 @@ document.addEventListener('DOMContentLoaded', function () {
             start: dataStart,
             once: dataOnce,
             toggleActions: 'play none play reverse',
-            markers: true,
           },
         },
       );
