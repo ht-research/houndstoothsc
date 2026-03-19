@@ -1950,6 +1950,10 @@ body.recess .casestudy_featured_item img {
   margin-left: 0px;
 }
 
+.casestudy_cards.curaxcura-cards {
+  overflow: hidden;
+}
+
 .cards_wrapper {
   display: flex;
   flex-direction: column;
