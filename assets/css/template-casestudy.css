@@ -183,6 +183,14 @@ img {
   object-fit: cover;
 }
 
+.casestudy_header_logo img.desktop-hidden {
+  display: block;
+}
+
+.casestudy_header_logo img.mobile-hidden {
+  display: none;
+}
+
 .casestudy_header_badge {
   position: absolute;
   right: 40px;
@@ -192,11 +200,24 @@ img {
   overflow: hidden;
 }
 
+body.curaxcura .casestudy_header_logo img {
+  max-height: 122px;
+  object-fit: contain;
+}
+
 @media (min-width: 576px) {
   .casestudy_header_section {
     /* margin-top: 100px; */
     margin-top: 0;
     margin-bottom: 30px;
+  }
+
+  .casestudy_header_logo img.desktop-hidden {
+    display: none;
+  }
+
+  .casestudy_header_logo img.mobile-hidden {
+    display: block;
   }
 }
 
@@ -268,6 +289,9 @@ img {
   flex-direction: column;
   padding-left: 15px;
   padding-right: 15px;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .casestudy_tagline_section .heading .line1,
@@ -357,6 +381,17 @@ img {
 
 .casestudy_tagline_section .heading.heading-mau .line2 {
   margin-top: -12px;
+  margin-bottom: 8px;
+}
+
+.casestudy_tagline_section .heading.heading-curaxcura .line1,
+.casestudy_tagline_section .heading.heading-curaxcura .line3 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.casestudy_tagline_section .heading.heading-curaxcura .line2 {
+  margin-top: -10px;
   margin-bottom: 8px;
 }
 
@@ -472,7 +507,8 @@ img {
   }
 
   .casestudy_tagline_section .heading.heading-curaxcura .line1 {
-    margin-right: 30%;
+    margin-left: 0;
+    /* margin-right: 30%; */
   }
 
   .casestudy_tagline_section .heading.heading-curaxcura .line2 {
@@ -481,6 +517,12 @@ img {
 
   .casestudy_tagline_section .heading.heading-curaxcura .line3 {
     margin-right: 8%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .casestudy_tagline_section .heading.heading-curaxcura .line1 {
+    margin-left: 8%;
   }
 }
 
@@ -531,6 +573,7 @@ img {
 .casestudy_info_heading {
   font-size: 26px;
   font-weight: 700;
+  text-transform: lowercase;
   line-height: 30px;
   display: flex;
   flex-wrap: wrap;
@@ -652,7 +695,7 @@ img {
 
 .casestudy_logo_inspirations_heading {
   font-weight: 700;
-  font-size: 26px;
+  font-size: 25px;
   line-height: 136%;
   text-transform: lowercase;
 }
@@ -940,6 +983,10 @@ img {
     text-align: center;
     padding-top: 0;
   }
+
+  .casestudy_logo_inspirations_image_4 {
+    max-width: 12vw;
+  }
 }
 
 @media (min-width: 1360px) {
@@ -1069,6 +1116,9 @@ img {
   .casestudy_intro_text {
     padding-left: 80px;
     padding-right: 80px;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -1766,6 +1816,24 @@ body.recess .casestudy_featured_item img {
   background-color: #faf7eb;
 }
 
+.casestudy_featured_curaxcura {
+  padding-bottom: 36px;
+}
+
+.casestudy_featured_curaxcura .casestudy_featured_cover {
+  aspect-ratio: 1 / 0.6;
+}
+
+.casestudy_featured_items_curaxcura {
+  display: flex;
+}
+
+.casestudy_featured_items_curaxcura .casestudy_featured_item {
+  width: calc(33.33% - 6px);
+  height: 142px;
+  margin: 0 5px;
+}
+
 @media (min-width: 576px) {
   .casestudy_featured {
     padding-bottom: 140px;
@@ -1781,7 +1849,8 @@ body.recess .casestudy_featured_item img {
     bottom: 0;
   }
 
-  .casestudy_featured_item {
+  .casestudy_featured_item,
+  .casestudy_featured_items_curaxcura .casestudy_featured_item {
     height: 365px;
     width: 260px;
     margin: 0 12px;
@@ -1816,8 +1885,8 @@ body.recess .casestudy_featured_item img {
     content: '';
   }
 
-  .casestudy_featured_cover {
-    /* height: 600px; */
+  .casestudy_featured_curaxcura .casestudy_featured_cover {
+    aspect-ratio: 1/0.42;
   }
 
   .casestudy_featured_items {
@@ -1954,6 +2023,10 @@ body.recess .casestudy_featured_item img {
   overflow: hidden;
 }
 
+.casestudy_cards.curaxcura-cards-1 .cards_wrapper {
+  flex-direction: row;
+}
+
 .cards_wrapper {
   display: flex;
   flex-direction: column;
@@ -1998,6 +2071,16 @@ body.recess .casestudy_featured_item img {
 .casestudy_cards .casestudy_card_image_2 {
   aspect-ratio: 1/0.75;
   overflow: hidden;
+}
+
+.casestudy_cards.curaxcura-cards .casestudy_card_image.with_padding {
+  padding: 0;
+}
+
+.casestudy_cards.curaxcura-cards-1 .casestudy_card_image,
+.casestudy_cards.curaxcura-cards-1 .casestudy_card_image img {
+  border: none;
+  border-radius: 0;
 }
 
 .casestudy_cards.curaxcura-cards-2 .casestudy_card_image.with_padding {
