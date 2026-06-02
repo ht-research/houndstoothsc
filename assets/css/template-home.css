@@ -1369,7 +1369,7 @@ Featued Case study
 .featured-case-study-card-title {
   font-family: var(--instrument-font);
   font-weight: 400;
-  font-size: 77px;
+  font-size: 78px;
   line-height: 70px;
   letter-spacing: -0.4%;
   text-transform: uppercase;
@@ -1377,7 +1377,7 @@ Featued Case study
   background-color: #fff;
   margin-top: -2px;
   border-top-right-radius: 12px;
-  padding: 14px 14px 8px 2px;
+  padding: 14px 12px 8px 2px;
   max-width: var(--featured-case-study-card-title-max-width);
 }
 
