@@ -2,25 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1" />
-    <meta
-      name="robots"
-      content="index, follow" />
-    <meta
-      property="og:image"
-      content="../assets/images/thumbnail_web.jpg" />
-    <meta
-      name="description"
-      content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:image" content="../assets/images/thumbnail_web.jpg" />
+    <meta name="description" content="" />
 
     <title>Houndstooth | Mozi Wash Case Study</title>
 
     <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-FJFZ208Z73"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJFZ208Z73"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -31,75 +21,1081 @@
     </script>
 
     <!-- Favicon -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="../assets/images/apple-touch-icon.png" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="../assets/images/favicon-32x32.png" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="../assets/images/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png" />
 
     <!-- Fonts -->
-    <link
-      rel="preconnect"
-      href="https://fonts.googleapis.com" />
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" />
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Bebas+Neue&display=swap" />
 
-    <link
-      href="../assets/css/fonts.css"
-      rel="preload"
-      as="style"
-      onload="this.rel='stylesheet'" />
-    <noscript
-      ><link
-        rel="stylesheet"
-        href="../assets/css/fonts.css"
-    /></noscript>
+    <link href="../assets/css/fonts.css" rel="preload" as="style" onload="this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="../assets/css/fonts.css" /></noscript>
 
     <!-- CSS -->
-    <link
-      rel="stylesheet"
-      href="../assets/css/main.min.css" />
-    <link
-      rel="stylesheet"
-      href="../assets/css/template-casestudy.min.css" />
+    <link rel="stylesheet" href="../assets/css/main.min.css" />
+    <link rel="stylesheet" href="../assets/css/template-casestudy.min.css" />
     <link
       href="../assets/css/flickity.min.css"
       rel="preload"
       as="style"
       onload="this.rel='stylesheet'" />
-    <noscript
-      ><link
-        rel="stylesheet"
-        href="../assets/css/flickity.min.css"
-    /></noscript>
-  </head>
-  <body class="curaxcura casestudy" style='background-color: #fff;'>
-    <!-- <div id="site-loader" class="site-loader"></div> -->
+    <noscript><link rel="stylesheet" href="../assets/css/flickity.min.css" /></noscript>
 
-    <div
-      id="site-page"
-      class="site">
+    <style>
+      body.moziwash {
+        background-color: #fff;
+      }
+
+      /* ── Heading ── */
+      @media (min-width: 992px) {
+        .casestudy_tagline_section .heading.heading-moziwash .line1 {
+          text-align: left;
+          margin-left: 5%;
+          max-width: none;
+        }
+        .casestudy_tagline_section .heading.heading-moziwash .line3 {
+          margin-right: 8%;
+        }
+      }
+
+      /* ── Business Card Section ── */
+      .moziwash_business_section {
+        position: relative;
+        overflow: hidden;
+        border-bottom: 1px solid #000;
+        background: #fff;
+      }
+
+      .moziwash_biz_inner {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 220px;
+      }
+
+      .moziwash_biz_text {
+        font-family: 'Bebas Neue', sans-serif;
+        color: #ebffd9;
+        font-size: clamp(80px, 16.7vw, 240px);
+        line-height: 1;
+        position: absolute;
+        z-index: 1;
+        pointer-events: none;
+        user-select: none;
+      }
+
+      .moziwash_biz_text_mozi {
+        left: 4%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .moziwash_biz_text_wash {
+        right: 4%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .moziwash_biz_cards {
+        display: flex;
+        width: 100%;
+        position: relative;
+        z-index: 2;
+      }
+
+      .moziwash_biz_card {
+        width: 50%;
+        line-height: 0;
+      }
+
+      .moziwash_biz_card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* ── Typography Section ── */
+      .moziwash_typography_section {
+        background-color: #efeee7;
+        border-bottom: 1px solid #000;
+        overflow: hidden;
+        padding-bottom: 40px;
+      }
+
+      .moziwash_typo_row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        border-bottom: 1px solid #a6a08f;
+        position: relative;
+      }
+
+      .moziwash_typo_block {
+        position: relative;
+        overflow: hidden;
+        border-right: 1px solid #a6a08f;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 16px;
+      }
+
+      .moziwash_typo_block:last-child {
+        border-right: none;
+      }
+
+      .moziwash_typo_char {
+        font-family: 'Syne', sans-serif;
+        font-size: clamp(100px, 21.5vw, 310px);
+        line-height: 1;
+        color: #a6a08f;
+        letter-spacing: -4px;
+        display: block;
+        margin-top: -8px;
+      }
+
+      .moziwash_typo_label {
+        font-family: 'Syne', sans-serif;
+        font-size: clamp(10px, 1.6vw, 24px);
+        font-weight: 600;
+        color: #a6a08f;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        white-space: nowrap;
+      }
+
+      .moziwash_color_row {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        padding: 30px 15px 0;
+        gap: 12px;
+      }
+
+      .moziwash_color_block {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .moziwash_color_swatch {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        border: 1px solid #000;
+        border-radius: 9px;
+      }
+
+      .moziwash_color_hex {
+        font-family: 'Syne', sans-serif;
+        font-size: clamp(8px, 1.3vw, 19px);
+        color: #000;
+        text-align: center;
+        white-space: nowrap;
+      }
+
+      @media (min-width: 768px) {
+        .moziwash_color_row {
+          padding: 40px 40px 0;
+          gap: 14px;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .moziwash_color_row {
+          padding: 50px 100px 0;
+        }
+      }
+
+      @media (min-width: 1280px) {
+        .moziwash_color_row {
+          padding: 60px 156px 0;
+        }
+      }
+
+      /* ── Colored Mosaic Panels ── */
+      .moziwash_panels {
+        border-top: 1px solid #000;
+      }
+
+      .moziwash_panel {
+        position: relative;
+        overflow: hidden;
+        border-bottom: 1px solid #000;
+      }
+
+      .moziwash_panel_inner {
+        margin: 8% 7.5%;
+        border: 1px solid #000;
+        border-radius: 10px;
+        overflow: hidden;
+        line-height: 0;
+        aspect-ratio: 16 / 9;
+      }
+
+      .moziwash_panel_inner_portrait {
+        aspect-ratio: 3 / 4;
+        max-width: 310px;
+      }
+
+      .moziwash_panel_inner img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .moziwash_panel_blue_narrow {
+        background-color: #4897af;
+        min-height: 280px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .moziwash_panel_teal {
+        background-color: #4faaab;
+      }
+
+      .moziwash_panel_blue_purple {
+        background-color: #4f6eab;
+      }
+
+      .moziwash_panel_green {
+        background-color: #cad78d;
+      }
+
+      @media (min-width: 768px) {
+        .moziwash_panels {
+          display: grid;
+          grid-template-columns: 30fr 70fr;
+        }
+
+        .moziwash_panel_blue_narrow {
+          grid-column: 1;
+          grid-row: 1;
+          border-right: 1px solid #000;
+          border-bottom: 1px solid #000;
+          min-height: 360px;
+        }
+
+        .moziwash_panel_teal {
+          grid-column: 2;
+          grid-row: 1;
+          border-bottom: 1px solid #000;
+        }
+
+        .moziwash_panel_blue_purple {
+          grid-column: 1;
+          grid-row: 2;
+          border-right: 1px solid #000;
+          border-bottom: none;
+        }
+
+        .moziwash_panel_green {
+          grid-column: 2;
+          grid-row: 2;
+          border-bottom: none;
+        }
+
+        .moziwash_panel_inner_portrait {
+          max-width: 60%;
+        }
+      }
+
+      /* ── App Mockup Section ── */
+      .moziwash_app_section {
+        position: relative;
+        overflow: hidden;
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+        min-height: 400px;
+      }
+
+      .moziwash_app_bg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .moziwash_app_mockup_wrapper {
+        position: relative;
+        z-index: 2;
+        padding: 40px 20px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .moziwash_app_mockup_wrapper img {
+        width: 100%;
+        max-width: 1020px;
+        object-fit: contain;
+        height: auto;
+      }
+
+      /* ── Bundle Builder Section ── */
+      .moziwash_bundle_section {
+        padding: 50px 15px;
+        border-bottom: 1px solid #000;
+      }
+
+      .moziwash_bundle_inner {
+        border: 1px solid #000;
+        border-radius: 10px;
+        overflow: hidden;
+        line-height: 0;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .moziwash_bundle_inner img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      @media (min-width: 768px) {
+        .moziwash_bundle_section {
+          padding: 60px 40px;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .moziwash_bundle_section {
+          padding: 80px 120px;
+        }
+      }
+
+      /* ── Product Showcase Section ── */
+      .moziwash_product_showcase {
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+        padding: 30px 15px;
+        background: linear-gradient(180deg, #c8dff4 0%, #dce9f5 40%, #e8eff8 70%, #f0f2e8 100%);
+      }
+
+      .moziwash_website_shot {
+        border: 1px solid #000;
+        border-radius: 20px;
+        overflow: hidden;
+        line-height: 0;
+        margin-bottom: 20px;
+      }
+
+      .moziwash_website_shot img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      .moziwash_cards_grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .moziwash_product_card {
+        border: 0.5px solid #000;
+        border-radius: 8px;
+        overflow: hidden;
+        aspect-ratio: 1 / 1;
+        position: relative;
+      }
+
+      /* Card 1 – Golden Hour bottle */
+      .mpc_golden_hour {
+        background-color: #fff;
+      }
+
+      .mpc_golden_hour .mpc_bg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center bottom;
+      }
+
+      .mpc_golden_hour .mpc_badge {
+        position: absolute;
+        bottom: 12%;
+        left: 8%;
+        background: #e4b933;
+        border-radius: 22px;
+        color: #fff;
+        font-family: 'Syne', sans-serif;
+        font-weight: 600;
+        font-size: clamp(10px, 1.4vw, 16px);
+        padding: 6px 16px;
+      }
+
+      /* Card 2 – Smells like */
+      .mpc_smells_like {
+        background-color: #1a1208;
+      }
+
+      .mpc_smells_like .mpc_photo {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .mpc_smells_like .mpc_overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to bottom, rgba(192, 164, 25, 0.85) 0%, rgba(252, 208, 213, 0) 60%);
+      }
+
+      .mpc_smells_like .mpc_text {
+        position: absolute;
+        top: 12%;
+        left: 10%;
+        color: #fff;
+        font-family: 'Syne', sans-serif;
+      }
+
+      .mpc_smells_like .mpc_text h4 {
+        font-weight: 700;
+        font-size: clamp(12px, 1.8vw, 22px);
+        margin: 0 0 4px;
+      }
+
+      .mpc_smells_like .mpc_text p {
+        font-weight: 300;
+        font-size: clamp(8px, 1.1vw, 13px);
+        margin: 0;
+        line-height: 1.3;
+        white-space: pre-line;
+      }
+
+      /* Card 3 – For Days */
+      .mpc_for_days {
+        background: linear-gradient(180deg, #e4b933 0%, #fff 100%);
+      }
+
+      .mpc_for_days .mpc_bottle {
+        position: absolute;
+        left: 50%;
+        top: 15%;
+        transform: translateX(-50%) rotate(-7deg);
+        width: 72%;
+        height: auto;
+        object-fit: contain;
+      }
+
+      .mpc_for_days .mpc_top_text {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #fff;
+        font-family: 'Syne', sans-serif;
+        font-weight: 500;
+        font-size: clamp(7px, 1vw, 12px);
+        white-space: nowrap;
+        text-align: center;
+      }
+
+      .mpc_for_days .mpc_for_days_pill {
+        position: absolute;
+        top: 16%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #fff;
+        border-radius: 22px;
+        padding: 3px 14px;
+        font-family: 'Syne', sans-serif;
+        font-weight: 700;
+        font-size: clamp(10px, 1.5vw, 17px);
+        color: #e4b933;
+        white-space: nowrap;
+      }
+
+      .mpc_for_days .mpc_pills_row {
+        position: absolute;
+        bottom: 12%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        align-items: center;
+      }
+
+      .mpc_for_days .mpc_pill {
+        background: #e4b933;
+        border: 0.6px solid #fff;
+        border-radius: 17px;
+        padding: 3px 10px;
+        color: #fff;
+        font-family: 'Syne', sans-serif;
+        font-weight: 600;
+        font-size: clamp(7px, 0.9vw, 12px);
+        white-space: nowrap;
+      }
+
+      /* Card 4 – Happy Customers */
+      .mpc_happy_customers {
+        background-color: #ebebeb;
+        padding: 10px;
+      }
+
+      .mpc_happy_customers .mpc_hc_header {
+        font-family: 'Syne', sans-serif;
+        font-weight: 600;
+        font-size: clamp(8px, 1.1vw, 12px);
+        color: #262525;
+        text-transform: capitalize;
+        margin-bottom: 8px;
+        padding: 4px 0 0 8px;
+      }
+
+      .mpc_review_card {
+        background: #dfddd7;
+        border-radius: 8px;
+        padding: 8px 10px;
+        margin-bottom: 6px;
+        box-shadow: 1px 1px 1px rgba(0,0,0,0.15);
+      }
+
+      .mpc_review_stars {
+        height: 12px;
+        width: 60px;
+        object-fit: contain;
+        margin-bottom: 4px;
+      }
+
+      .mpc_review_text {
+        font-family: 'Syne', sans-serif;
+        font-size: clamp(6px, 0.75vw, 8px);
+        color: #000;
+        line-height: 1.3;
+        margin: 0 0 2px;
+      }
+
+      .mpc_review_author {
+        font-family: 'Syne', sans-serif;
+        font-weight: 700;
+        font-size: clamp(6px, 0.75vw, 8px);
+        color: #000;
+        margin: 0;
+      }
+
+      /* Card 5 – Fragrance Strength */
+      .mpc_fragrance {
+        background-color: #f9f5e9;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 10% 8% 8%;
+        position: relative;
+      }
+
+      .mpc_fragrance .mpc_ellipse {
+        position: absolute;
+        top: 14%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 73%;
+        height: auto;
+        pointer-events: none;
+      }
+
+      .mpc_fragrance .mpc_title {
+        font-family: 'Syne', sans-serif;
+        font-weight: 600;
+        font-size: clamp(8px, 1.2vw, 19px);
+        color: #000;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 4px;
+      }
+
+      .mpc_fragrance .mpc_strength_bar_row {
+        display: flex;
+        gap: 2px;
+        width: 80%;
+        position: relative;
+        z-index: 1;
+      }
+
+      .mpc_fragrance .mpc_bar_seg {
+        height: 3px;
+        flex: 1;
+        background: #e9e9e9;
+        border-radius: 1px;
+      }
+
+      .mpc_fragrance .mpc_bar_seg.filled {
+        background: #eecb78;
+      }
+
+      .mpc_fragrance .mpc_strength_labels {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        font-family: 'Syne', sans-serif;
+        font-size: clamp(5px, 0.7vw, 9px);
+        color: #000;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 1;
+        margin-top: 2px;
+      }
+
+      .mpc_fragrance .mpc_bottle_img {
+        position: relative;
+        z-index: 1;
+        width: 45%;
+        object-fit: contain;
+        flex: 1;
+        max-height: 45%;
+        transform: rotate(-11deg);
+      }
+
+      .mpc_fragrance .mpc_scent_pill {
+        border: 0.3px solid #e4b933;
+        border-radius: 18px;
+        padding: 4px 10px;
+        font-family: 'Syne', sans-serif;
+        font-size: clamp(5px, 0.7vw, 11px);
+        color: #e4b933;
+        white-space: nowrap;
+        position: relative;
+        z-index: 1;
+        margin-top: auto;
+      }
+
+      /* Card 6 – Mozi vs Others */
+      .mpc_vs {
+        background-color: #e4b933;
+        padding: 6%;
+        position: relative;
+      }
+
+      .mpc_vs .mpc_vs_inner {
+        background: #f9f5e9;
+        border: 0.6px solid #000;
+        border-radius: 7px;
+        width: 100%;
+        height: 100%;
+        padding: 6% 5%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .mpc_vs .mpc_vs_header {
+        display: flex;
+        justify-content: space-around;
+        font-family: 'Syne', sans-serif;
+        font-weight: 700;
+        font-size: clamp(8px, 1.2vw, 19px);
+        color: #000;
+        text-align: center;
+        margin-bottom: 6px;
+      }
+
+      .mpc_vs .mpc_vs_photos_row {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-bottom: 8px;
+        position: relative;
+      }
+
+      .mpc_vs_photo {
+        width: 36%;
+        aspect-ratio: 1;
+        object-fit: contain;
+      }
+
+      .mpc_vs .mpc_vs_circle {
+        width: 12%;
+        aspect-ratio: 1;
+        object-fit: contain;
+        flex-shrink: 0;
+      }
+
+      .mpc_vs .mpc_vs_cols {
+        display: flex;
+        gap: 4%;
+        flex: 1;
+      }
+
+      .mpc_vs_col {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .mpc_vs_row {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        font-family: 'Syne', sans-serif;
+        font-size: clamp(6px, 0.75vw, 11px);
+        color: #000;
+      }
+
+      .mpc_vs_icon {
+        width: clamp(8px, 1vw, 11px);
+        height: clamp(8px, 1vw, 11px);
+        object-fit: contain;
+        flex-shrink: 0;
+      }
+
+      /* Card 7 – Features icons */
+      .mpc_features {
+        background-color: #e4b933;
+        padding: 6%;
+        position: relative;
+      }
+
+      .mpc_features .mpc_feat_inner {
+        background: #f9f5e9;
+        border: 0.6px solid #000;
+        border-radius: 7px;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .mpc_feat_cell {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 8%;
+        text-align: center;
+        position: relative;
+      }
+
+      .mpc_feat_cell:nth-child(1),
+      .mpc_feat_cell:nth-child(2) {
+        border-bottom: 0.15px solid #000;
+      }
+
+      .mpc_feat_cell:nth-child(1),
+      .mpc_feat_cell:nth-child(3) {
+        border-right: 0.15px solid #000;
+      }
+
+      .mpc_feat_icon {
+        width: clamp(24px, 3vw, 43px);
+        height: auto;
+        margin-bottom: 6px;
+        object-fit: contain;
+      }
+
+      .mpc_feat_label {
+        font-family: 'Syne', sans-serif;
+        font-size: clamp(5px, 0.7vw, 9px);
+        color: #000;
+        line-height: 1.3;
+      }
+
+      .mpc_feat_brand {
+        position: absolute;
+        top: 4%;
+        right: 5%;
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: clamp(8px, 1vw, 14px);
+        color: #0b0a0a;
+        letter-spacing: 0.5px;
+      }
+
+      /* Card 8 – Gentle on Skin */
+      .mpc_gentle {
+        position: relative;
+      }
+
+      .mpc_gentle .mpc_photo {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .mpc_gentle .mpc_headline {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #f9f5e9;
+        font-family: 'Syne', sans-serif;
+        font-weight: 700;
+        font-size: clamp(11px, 1.6vw, 23px);
+        text-align: center;
+        line-height: 1.07;
+        width: 60%;
+      }
+
+      .mpc_gentle .mpc_text_card {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, 8%);
+        background: rgba(249, 245, 233, 0.97);
+        border: 0.15px solid #000;
+        border-radius: 11px;
+        width: 63%;
+        padding: 8% 7%;
+        font-family: 'Syne', sans-serif;
+        font-size: clamp(5px, 0.65vw, 9px);
+        color: #000;
+        text-align: center;
+        line-height: 1.4;
+      }
+
+      @media (min-width: 768px) {
+        .moziwash_product_showcase {
+          padding: 50px 40px;
+        }
+
+        .moziwash_website_shot {
+          margin-bottom: 30px;
+        }
+
+        .moziwash_cards_grid {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 16px;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .moziwash_product_showcase {
+          padding: 80px 86px;
+        }
+      }
+
+      /* ── Metrics Section ── */
+      .moziwash_metrics_section {
+        display: grid;
+        grid-template-columns: 1fr;
+        border-bottom: 1px solid #000;
+      }
+
+      .moziwash_metric {
+        padding: 40px 30px;
+        border-bottom: 1px solid #000;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .moziwash_metric:last-child {
+        border-bottom: none;
+      }
+
+      .moziwash_metric_label {
+        font-family: 'Syne', sans-serif;
+        font-size: clamp(24px, 4vw, 56px);
+        font-weight: 500;
+        line-height: 1.1;
+        color: #000;
+        margin-bottom: 20px;
+        max-width: 360px;
+      }
+
+      .moziwash_metric_number {
+        font-family: 'Syne', sans-serif;
+        font-size: clamp(64px, 9vw, 117px);
+        font-weight: 700;
+        line-height: 1.08;
+        color: #000;
+        text-transform: uppercase;
+      }
+
+      @media (min-width: 768px) {
+        .moziwash_metrics_section {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .moziwash_metric {
+          border-bottom: none;
+          border-right: 1px solid #000;
+          padding: 60px 40px 40px;
+          min-height: 631px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+
+        .moziwash_metric:last-child {
+          border-right: none;
+        }
+      }
+
+      /* ═══════════════════════════════════════
+         MOBILE  (≤ 767 px)
+         ═══════════════════════════════════════ */
+      @media (max-width: 767px) {
+
+        /* ── Business card MOZI / wash text ── */
+        .moziwash_biz_text {
+          font-size: 74.851px;
+        }
+
+        /* ── Typography characters ── */
+        .moziwash_typo_char {
+          font-size: 80.686px !important;
+        }
+
+        /* ── Showcase: stack cards vertically ── */
+        .casestudy_showcase .cards_wrapper {
+          flex-direction: column;
+        }
+
+        .casestudy_showcase .casestudy_card_image_1 {
+          width: 100%;
+          height: 255px;
+          aspect-ratio: unset;
+          border-bottom: 0.5px solid #000 !important;
+        }
+
+        .casestudy_showcase .casestudy_card_image_2 {
+          width: 298px !important;
+          height: 451px;
+          margin: 42px auto;
+          border: 1px solid #000 !important;
+          border-radius: 10.946px !important;
+          overflow: hidden;
+          aspect-ratio: unset;
+        }
+
+        /* ── Panels: reorder and resize ── */
+        .moziwash_panels {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .moziwash_panel_blue_narrow { order: 1; min-height: 464px; border-bottom: 1px solid #000; }
+        .moziwash_panel_green       { order: 2; min-height: 457px; border-bottom: 1px solid #000; }
+        .moziwash_panel_teal        { order: 3; min-height: 194px; border-bottom: 1px solid #000; }
+        .moziwash_panel_blue_purple { order: 4; min-height: 247px; border-bottom: none; }
+
+        /* portrait panels inner */
+        .moziwash_panel_blue_narrow .moziwash_panel_inner,
+        .moziwash_panel_green .moziwash_panel_inner {
+          aspect-ratio: unset;
+          max-width: none;
+          width: 299px;
+          height: 380px;
+          margin: 42px auto;
+        }
+
+        /* landscape panels inner */
+        .moziwash_panel_teal .moziwash_panel_inner {
+          aspect-ratio: unset;
+          max-width: none;
+          width: 319px;
+          height: 138px;
+          margin: 28px auto;
+        }
+
+        .moziwash_panel_blue_purple .moziwash_panel_inner {
+          aspect-ratio: unset;
+          max-width: none;
+          width: 311px;
+          height: 184px;
+          margin: 32px auto;
+        }
+
+        /* ── App section: handle overflow ── */
+        .moziwash_app_mockup_wrapper {
+          padding: 24px 0;
+          overflow: hidden;
+        }
+
+        .moziwash_app_mockup_wrapper img {
+          width: 445px;
+          max-width: none;
+        }
+
+        /* ── Bundle builder ── */
+        .moziwash_bundle_section {
+          padding: 20px 12px;
+          display: flex;
+          justify-content: center;
+        }
+
+        .moziwash_bundle_inner {
+          width: 350px;
+          max-width: 350px;
+          height: 201px;
+          overflow: hidden;
+        }
+
+        .moziwash_bundle_inner img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+
+        /* ── Metrics: horizontal row layout ── */
+        .moziwash_metrics_section {
+          display: block;
+          padding: 0 12px;
+          border-bottom: none;
+        }
+
+        .moziwash_metric {
+          height: 105px;
+          padding: 0 24px;
+          border: 0.243px solid #000;
+          border-bottom: none;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          min-height: unset;
+        }
+
+        .moziwash_metric:last-child {
+          border-bottom: 0.243px solid #000;
+          border-right: none;
+        }
+
+        .moziwash_metric_label {
+          font-size: 13.611px;
+          line-height: 1.087;
+          max-width: 96px;
+          margin-bottom: 0;
+        }
+
+        .moziwash_metric_number {
+          font-size: 54.206px;
+          line-height: 1.087;
+          text-align: right;
+        }
+
+        /* ── Nav links: ensure pill width ── */
+        .casestudy_nav_link {
+          width: 100%;
+          max-width: 350px;
+        }
+      }
+    </style>
+  </head>
+  <body class="moziwash casestudy" style="background-color: #fff;">
+    <div id="site-page" class="site">
       <!-- Header -->
       <header class="site_header site_header_casestudy">
         <div class="site_header_wrapper">
-          <a
-            class="site_brand"
-            href="../"
-            aria-label="go to home">
+          <a class="site_brand" href="../" aria-label="go to home">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="32"
@@ -111,30 +1107,19 @@
                 fill="#000" />
             </svg>
           </a>
-          <button
-            class="site_menu_toggle menu_toggle_open"
-            type="button"
-            style="color: black">
+          <button class="site_menu_toggle menu_toggle_open" type="button" style="color: black">
             (Menu)
           </button>
         </div>
       </header>
 
-      <div
-        class="site_menu_modal"
-        style="display: none">
+      <div class="site_menu_modal" style="display: none">
         <nav class="site_navigation">
-          <button
-            class="site_menu_toggle menu_toggle_close"
-            type="button">
-            (Close)
-          </button>
+          <button class="site_menu_toggle menu_toggle_close" type="button">(Close)</button>
           <ul class="site_navbar">
             <li>
               <a href="../">
-                <div
-                  class="site_nav_content site_nav_content_1"
-                  data-hover="false">
+                <div class="site_nav_content site_nav_content_1" data-hover="false">
                   <span class="site_nav_text">Home</span>
                   <span class="site_nav_index">
                     (
@@ -229,13 +1214,10 @@
       </div>
 
       <!-- Body -->
-      <div
-        class="smooth-scroll smoooth"
-        id="smooth-wrapper">
-        <div
-          class="smooth-scroll-inner smoooth-inner"
-          id="smooth-content">
-          <!-- Page Header Section -->
+      <div class="smooth-scroll smoooth" id="smooth-wrapper">
+        <div class="smooth-scroll-inner smoooth-inner" id="smooth-content">
+
+          <!-- Hero -->
           <section class="casestudy_header_section casestudy_header">
             <div class="casestudy_header_image cs_anim_header">
               <img
@@ -246,21 +1228,11 @@
                 width="2257"
                 height="1249" />
             </div>
-            <div class="casestudy_header_logo cs_anim_logo">
-              <img
-                class="lozad"
-                data-src="../assets/images/curaxcura/curaxcura-logo-color.svg"
-                fetchpriority="high"
-                alt=""
-                width="1316"
-                height="132" />
-            </div>
           </section>
 
-          <!-- work -->
-
-          <section class="casestudy_tagline_section bright">
-            <h1 class="heading heading-curaxcura cs_anim_heading">
+          <!-- Heading: Luxury / Laundry / Detergent -->
+          <section class="casestudy_tagline_section bright three_line_text">
+            <h1 class="heading heading-moziwash cs_anim_heading">
               <span class="line1">Luxury</span>
               <span class="line2">Laundry</span>
               <span class="line3">Detergent</span>
@@ -269,51 +1241,100 @@
 
           <div class="casestudy_intro_top_blank_space"></div>
           <div class="rest_of_the_section">
-            <section
-              class="casestudy_intro"
-              style="background-color: #f7e591">
-              <div class="casestudy_intro_images">
-                <div class="casestudy_intro_image curaxcura_intro_image">
-                  <img
-                    loading="lazy"
-                    src="../assets/images/curaxcura/webp/curaxcura-grid-image-1.webp"
-                    alt="" />
+
+            <!-- Business Card Mockup Section -->
+            <section class="moziwash_business_section">
+              <div class="moziwash_biz_inner">
+                <span class="moziwash_biz_text moziwash_biz_text_mozi">MOZI</span>
+                <div class="moziwash_biz_cards">
+                  <div class="moziwash_biz_card">
+                    <img
+                      loading="lazy"
+                      src="../assets/images/moziwash/webp/moziwash-business-card-1.png"
+                      alt="Mozi Wash business card mockup" />
+                  </div>
+                  <div class="moziwash_biz_card">
+                    <img
+                      loading="lazy"
+                      src="../assets/images/moziwash/webp/moziwash-business-card-2.png"
+                      alt="Mozi Wash business card mockup" />
+                  </div>
                 </div>
-                <div class="casestudy_intro_image curaxcura_intro_image">
-                  <img
-                    loading="lazy"
-                    src="../assets/images/curaxcura/webp/curaxcura-grid-image-2.webp"
-                    alt="" />
+                <span class="moziwash_biz_text moziwash_biz_text_wash">wash</span>
+              </div>
+            </section>
+
+            <!-- Typography & Colour Palette Section -->
+            <section class="moziwash_typography_section">
+              <div class="moziwash_typo_row">
+                <div class="moziwash_typo_block">
+                  <span class="moziwash_typo_char" style="font-weight: 700;">Aa</span>
+                  <span class="moziwash_typo_label">Degular Semibold</span>
                 </div>
-                <div class="casestudy_intro_image curaxcura_intro_image">
-                  <img
-                    loading="lazy"
-                    src="../assets/images/curaxcura/webp/curaxcura-grid-image-3.webp"
-                    alt="" />
+                <div class="moziwash_typo_block">
+                  <span class="moziwash_typo_char" style="font-weight: 600;">Bb</span>
+                  <span class="moziwash_typo_label">Degular Medium</span>
+                </div>
+                <div class="moziwash_typo_block">
+                  <span class="moziwash_typo_char" style="font-weight: 400;">Cc</span>
+                  <span class="moziwash_typo_label">Degular Regular</span>
+                </div>
+                <div class="moziwash_typo_block">
+                  <span class="moziwash_typo_char" style="font-weight: 300;">Dd</span>
+                  <span class="moziwash_typo_label">Degular Light</span>
                 </div>
               </div>
-              <div class="casestudy_intro_content curaxcura_intro_content">
-                <div class="casestudy_intro_text">
-                  Traditional Chinese Medicine classic formula, supplements & skincare. Traditional
-                  Chinese Medicine classic formula, supplements & skincare.
+              <div class="moziwash_color_row">
+                <div class="moziwash_color_block">
+                  <div class="moziwash_color_swatch" style="background-color: #fffdf7;"></div>
+                  <span class="moziwash_color_hex">#FFFDF7</span>
+                </div>
+                <div class="moziwash_color_block">
+                  <div class="moziwash_color_swatch" style="background-color: #faf3e0;"></div>
+                  <span class="moziwash_color_hex">#FAF3E0</span>
+                </div>
+                <div class="moziwash_color_block">
+                  <div class="moziwash_color_swatch" style="background-color: #e2e3ff;"></div>
+                  <span class="moziwash_color_hex">#E2E3FF</span>
+                </div>
+                <div class="moziwash_color_block">
+                  <div class="moziwash_color_swatch" style="background-color: #ebf6f6;"></div>
+                  <span class="moziwash_color_hex">#EBF6F6</span>
+                </div>
+                <div class="moziwash_color_block">
+                  <div class="moziwash_color_swatch" style="background-color: #10acac;"></div>
+                  <span class="moziwash_color_hex">#10ACAC</span>
+                </div>
+                <div class="moziwash_color_block">
+                  <div class="moziwash_color_swatch" style="background-color: #262525;"></div>
+                  <span class="moziwash_color_hex">#262525</span>
                 </div>
               </div>
             </section>
 
+            <!-- Who, Why and How -->
             <section class="casestudy_info">
-              <div class="casestudy_info_content curaxcura_content">
+              <div class="casestudy_info_content">
                 <h2 class="casestudy_info_heading">Who, Why <span>and how</span></h2>
                 <div class="casestudy_info_text">
                   <p>
-                    Mobile Apps Unlocked, also known as MAU Vegas, stands as the paramount global gathering for mobile app acquisition and retention. This exceptional event boasts a staggering array of industry giants such as Spotify, Tinder, Lyft, Bumble, and MailChimp, to name a few.
+                    Mobile Apps Unlocked, also known as MAU Vegas, stands as the paramount global
+                    gathering for mobile app acquisition and retention. This exceptional event boasts
+                    a staggering array of industry giants such as Spotify, Tinder, Lyft, Bumble, and
+                    MailChimp, to name a few.
                   </p>
-                  <p>Entrusted with an awe-inspiring mission, we undertook the challenge of crafting, and executing the event's visual direction that included the event identity, signages, posters, hoardings, brochures, lounge banners, tickets, merchandise and website.
+                  <p>
+                    Entrusted with an awe-inspiring mission, we undertook the challenge of crafting,
+                    and executing the event's visual direction that included the event identity,
+                    signages, posters, hoardings, brochures, lounge banners, tickets, merchandise
+                    and website.
                   </p>
                 </div>
               </div>
             </section>
 
-            <section class="casestudy_showcase curaxcura-cards" style='background-color: #F9F3E2;'>
+            <!-- Showcase Cards — yellow background -->
+            <section class="casestudy_showcase" style="background-color: #f9f3e2; border-top: 1px solid #000; border-bottom: 1px solid #000;">
               <div class="cards_wrapper">
                 <div class="casestudy_card_image casestudy_card_image_1">
                   <img
@@ -330,120 +1351,244 @@
               </div>
             </section>
 
-
-             <section
-              class="casestudy_cards moziwash-cards"
-              style="background-color: #000000;">
-              <div class="cards_wrapper">
-                <div
-                  class="casestudy_card_image casestudy_card_image_1 with_padding border-t"
-                  style="border-color: #f7e591">
+            <!-- Coloured Mosaic Panels -->
+            <section class="moziwash_panels">
+              <div class="moziwash_panel moziwash_panel_blue_narrow">
+                <div class="moziwash_panel_inner moziwash_panel_inner_portrait">
                   <img
                     loading="lazy"
                     src="../assets/images/moziwash/webp/moziwash-card-3.webp"
                     alt="" />
                 </div>
-                <div
-                  class="casestudy_card_image casestudy_card_image_2">
+              </div>
+              <div class="moziwash_panel moziwash_panel_teal">
+                <div class="moziwash_panel_inner">
                   <img
                     loading="lazy"
-                    src="../assets/images/moziwash/moziwash-card-4.png"
+                    src="../assets/images/moziwash/webp/moziwash-card-4.webp"
+                    alt="" />
+                </div>
+              </div>
+              <div class="moziwash_panel moziwash_panel_blue_purple">
+                <div class="moziwash_panel_inner">
+                  <img
+                    loading="lazy"
+                    src="../assets/images/moziwash/webp/moziwash-card-5.webp"
+                    alt="" />
+                </div>
+              </div>
+              <div class="moziwash_panel moziwash_panel_green">
+                <div class="moziwash_panel_inner moziwash_panel_inner_portrait">
+                  <img
+                    loading="lazy"
+                    src="../assets/images/moziwash/webp/moziwash-card-6.webp"
                     alt="" />
                 </div>
               </div>
             </section>
 
+            <!-- Marquee: clean clothes cleaner conscience -->
             <section
               class="casestudy_tagline marquee3k"
               data-speed="1.5"
               data-reverse="false"
               data-pausable="false">
               <div class="casestudy_tagline_text">
-                <span class="text_style_1">chinese herbs</span>
-                <span class="text_style_2">for holistic healing</span>
-                <span class="text_style_1">chinese herbs</span>
-                <span class="text_style_2">for holistic healing</span>
+                <span class="text_style_1">clean clothes</span>
+                <span class="text_style_2">cleaner conscience</span>
+                <span class="text_style_1">clean clothes</span>
+                <span class="text_style_2">cleaner conscience</span>
               </div>
             </section>
 
+            <!-- Product Showcase Section -->
+            <section class="moziwash_product_showcase">
 
-            <section class="casestudy_cover_image with_padding_mobile">
-              <img
-                loading="lazy"
-                src="../assets/images/curaxcura/webp/curaxcura-cover-image-1-mobile.webp"
-                class="desktop-hidden"
-                alt="" />
-              <img
-                loading="lazy"
-                src="../assets/images/curaxcura/webp/curaxcura-cover-image-1.webp"
-                class="mobile-hidden"
-                alt="" />
-            </section>
-
-            <section
-              class="casestudy_tagline marquee3k"
-              data-speed="1.5"
-              data-reverse="false"
-              data-pausable="false">
-              <div class="casestudy_tagline_text">
-                <span class="text_style_1">chinese herbs</span>
-                <span class="text_style_2">for holistic healing</span>
-                <span class="text_style_1">chinese herbs</span>
-                <span class="text_style_2">for holistic healing</span>
+              <!-- Website screenshot -->
+              <div class="moziwash_website_shot">
+                <img
+                  loading="lazy"
+                  src="../assets/images/moziwash/webp/moziwash-website-screenshot.png"
+                  alt="Mozi Wash website screenshot" />
               </div>
-            </section>
 
-            <section class="casestudy_cover_image">
-              <img
-                loading="lazy"
-                src="../assets/images/curaxcura/webp/curaxcura-cover-image-2.webp"
-                alt="" />
-            </section>
+              <!-- 8-card grid -->
+              <div class="moziwash_cards_grid">
 
-            <section
-              class="casestudy_cards curaxcura-cards-2"
-              style="background-color: #ffffe1; margin-bottom: -1px">
-              <div class="cards_wrapper">
-                <div class="casestudy_card_image casestudy_card_image_1 with_padding border-t">
-                  <img
-                    loading="lazy"
-                    src="../assets/images/curaxcura/webp/curaxcura-card-4.webp"
-                    alt="" />
+                <!-- Card 1: Golden Hour bottle -->
+                <div class="moziwash_product_card mpc_golden_hour">
+                  <img class="mpc_bg" loading="lazy" src="../assets/images/moziwash/webp/moziwash-bg-rectangle.png" alt="" />
+                  <div class="absolute" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;overflow:hidden;">
+                    <img loading="lazy" src="../assets/images/moziwash/webp/moziwash-bottles-colorful.png" alt="" style="width:100%;height:100%;object-fit:cover;transform:rotate(37deg) scale(1.2);" />
+                  </div>
+                  <span class="mpc_badge">Golden Hour</span>
                 </div>
-                <div class="casestudy_card_image casestudy_card_image_2">
-                  <img
-                    loading="lazy"
-                    src="../assets/images/curaxcura/webp/curaxcura-card-3.webp"
-                    alt="" />
+
+                <!-- Card 2: Smells like -->
+                <div class="moziwash_product_card mpc_smells_like">
+                  <img class="mpc_photo" loading="lazy" src="../assets/images/moziwash/webp/moziwash-ingredients.png" alt="" />
+                  <div class="mpc_overlay"></div>
+                  <div class="mpc_text">
+                    <h4>Smells like:</h4>
+                    <p>Sandalwood, Leather and&#10;Cardamom</p>
+                  </div>
                 </div>
+
+                <!-- Card 3: For Days! -->
+                <div class="moziwash_product_card mpc_for_days">
+                  <p class="mpc_top_text" style="top:10%;">With Scent That Lasts</p>
+                  <div class="mpc_for_days_pill" style="top:20%;">For Days!</div>
+                  <img class="mpc_bottle" loading="lazy" src="../assets/images/moziwash/webp/moziwash-bottle-orange.png" alt="" />
+                  <div class="mpc_pills_row">
+                    <span class="mpc_pill">+ Ultra Concentrated</span>
+                    <span class="mpc_pill">+ Better Clean</span>
+                    <span class="mpc_pill">+ Earth Friendly</span>
+                  </div>
+                </div>
+
+                <!-- Card 4: Happy Customers -->
+                <div class="moziwash_product_card mpc_happy_customers">
+                  <p class="mpc_hc_header">Our Goal: Happy Customers</p>
+                  <div class="mpc_review_card">
+                    <img class="mpc_review_stars" loading="lazy" src="../assets/images/moziwash/webp/moziwash-review-stars.png" alt="5 stars" />
+                    <p class="mpc_review_text">"My absolute favorite. People stop me to ask what I'm wearing — the scent is incredible."</p>
+                    <p class="mpc_review_author">– Emily R., 36 • Brooklyn, NY</p>
+                  </div>
+                  <div class="mpc_review_card">
+                    <img class="mpc_review_stars" loading="lazy" src="../assets/images/moziwash/webp/moziwash-review-stars.png" alt="5 stars" />
+                    <p class="mpc_review_text">"I've been searching for a clean, healthy way to wash my clothes and finally found it. The fact that it smells this good makes laundry exciting."</p>
+                    <p class="mpc_review_author">– Lauren M., 44 • Portland, OR</p>
+                  </div>
+                </div>
+
+                <!-- Card 5: Fragrance Strength -->
+                <div class="moziwash_product_card mpc_fragrance">
+                  <img class="mpc_ellipse" loading="lazy" src="../assets/images/moziwash/webp/moziwash-ellipse-gradient.png" alt="" />
+                  <p class="mpc_title">Fragrance Strength</p>
+                  <div class="mpc_strength_bar_row">
+                    <div class="mpc_bar_seg filled"></div>
+                    <div class="mpc_bar_seg filled"></div>
+                    <div class="mpc_bar_seg filled"></div>
+                    <div class="mpc_bar_seg"></div>
+                    <div class="mpc_bar_seg"></div>
+                  </div>
+                  <div class="mpc_strength_labels">
+                    <span>Light</span><span>Medium</span><span>Strong</span>
+                  </div>
+                  <img class="mpc_bottle_img" loading="lazy" src="../assets/images/moziwash/webp/moziwash-bottle-orange.png" alt="" />
+                  <span class="mpc_scent_pill">Sandalwood + Leather + Cardamom</span>
+                </div>
+
+                <!-- Card 6: Mozi Wash vs Others -->
+                <div class="moziwash_product_card mpc_vs">
+                  <div class="mpc_vs_inner">
+                    <div class="mpc_vs_header">
+                      <span>Mozi Wash</span>
+                      <span>Others</span>
+                    </div>
+                    <div class="mpc_vs_photos_row">
+                      <img class="mpc_vs_photo" loading="lazy" src="../assets/images/moziwash/webp/moziwash-bottle-orange.png" alt="" />
+                      <img class="mpc_vs_circle" loading="lazy" src="../assets/images/moziwash/webp/moziwash-vs-circle.png" alt="vs" />
+                      <img class="mpc_vs_photo" loading="lazy" src="../assets/images/moziwash/webp/moziwash-bottle-beige.png" alt="" />
+                    </div>
+                    <div class="mpc_vs_cols">
+                      <div class="mpc_vs_col">
+                        <div class="mpc_vs_row"><img class="mpc_vs_icon" src="../assets/images/moziwash/webp/moziwash-icon-check-green.png" alt="✓" /><span>Luxury Scents</span></div>
+                        <div class="mpc_vs_row"><img class="mpc_vs_icon" src="../assets/images/moziwash/webp/moziwash-icon-check-green.png" alt="✓" /><span>Plant Based</span></div>
+                        <div class="mpc_vs_row"><img class="mpc_vs_icon" src="../assets/images/moziwash/webp/moziwash-icon-check-outline.png" alt="✓" /><span>Sensitive Skin Safe</span></div>
+                        <div class="mpc_vs_row"><img class="mpc_vs_icon" src="../assets/images/moziwash/webp/moziwash-icon-check-outline.png" alt="✓" /><span>Hormone Safe</span></div>
+                        <div class="mpc_vs_row"><img class="mpc_vs_icon" src="../assets/images/moziwash/webp/moziwash-icon-check-green.png" alt="✓" /><span>Eco Metal Tin</span></div>
+                      </div>
+                      <div class="mpc_vs_col">
+                        <div class="mpc_vs_row"><img class="mpc_vs_icon" src="../assets/images/moziwash/webp/moziwash-icon-cross-outline.png" alt="✗" /><span>Generic Scents</span></div>
+                        <div class="mpc_vs_row"><img class="mpc_vs_icon" src="../assets/images/moziwash/webp/moziwash-icon-cross-red.png" alt="✗" /><span>Chemical Formulas</span></div>
+                        <div class="mpc_vs_row"><img class="mpc_vs_icon" src="../assets/images/moziwash/webp/moziwash-icon-cross-b.png" alt="✗" /><span>Harsh on Skin</span></div>
+                        <div class="mpc_vs_row"><img class="mpc_vs_icon" src="../assets/images/moziwash/webp/moziwash-icon-cross-c.png" alt="✗" /><span>Bulky Packaging</span></div>
+                        <div class="mpc_vs_row"><img class="mpc_vs_icon" src="../assets/images/moziwash/webp/moziwash-icon-cross-d.png" alt="✗" /><span>Plastic Bottle</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 7: Features icons -->
+                <div class="moziwash_product_card mpc_features">
+                  <div class="mpc_feat_inner">
+                    <span class="mpc_feat_brand">MOZI WASH</span>
+                    <div class="mpc_feat_cell">
+                      <img class="mpc_feat_icon" loading="lazy" src="../assets/images/moziwash/webp/moziwash-features-grid.png" alt="" />
+                      <p class="mpc_feat_label">Long-lasting unique fragrances</p>
+                    </div>
+                    <div class="mpc_feat_cell">
+                      <img class="mpc_feat_icon" loading="lazy" src="../assets/images/moziwash/webp/moziwash-feature-icon-2.png" alt="" />
+                      <p class="mpc_feat_label">97% less plastic than other detergents</p>
+                    </div>
+                    <div class="mpc_feat_cell">
+                      <img class="mpc_feat_icon" loading="lazy" src="../assets/images/moziwash/webp/moziwash-feature-icon-1.png" alt="" />
+                      <p class="mpc_feat_label">Plant-based, biodegradable formula</p>
+                    </div>
+                    <div class="mpc_feat_cell">
+                      <img class="mpc_feat_icon" loading="lazy" src="../assets/images/moziwash/webp/moziwash-feature-icon-3.png" alt="" />
+                      <p class="mpc_feat_label">Cruelty-free, never tested on animals</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 8: Gentle on Skin -->
+                <div class="moziwash_product_card mpc_gentle">
+                  <img class="mpc_photo" loading="lazy" src="../assets/images/moziwash/webp/moziwash-nature-bg.png" alt="" />
+                  <p class="mpc_headline">Gentle on Skin, Kind to Earth.</p>
+                  <div class="mpc_text_card">
+                    Mozi Wash is redefining laundry with <strong>long-lasting natural fragrances</strong>, a <strong>plant-based biodegradable formula</strong>, and packaging that uses <strong>97% less plastic</strong> than conventional detergents. <strong>Cruelty-free</strong> and consciously crafted, it's a cleaner choice for your clothes — and the planet.
+                  </div>
+                </div>
+
               </div>
             </section>
 
-            <section class="casestudy_grid_images">
-              <div class="casestudy_grid_image">
+            <!-- App Mockup Section -->
+            <section class="moziwash_app_section">
+              <img
+                class="moziwash_app_bg"
+                loading="lazy"
+                src="../assets/images/moziwash/webp/moziwash-app-bg.png"
+                alt="" />
+              <div class="moziwash_app_mockup_wrapper">
                 <img
                   loading="lazy"
-                  src="../assets/images/curaxcura/webp/curaxcura-grid-image-1.webp"
-                  alt="" />
-              </div>
-              <div class="casestudy_grid_image">
-                <img
-                  loading="lazy"
-                  src="../assets/images/curaxcura/webp/curaxcura-grid-image-2.webp"
-                  alt="" />
-              </div>
-              <div class="casestudy_grid_image">
-                <img
-                  loading="lazy"
-                  src="../assets/images/curaxcura/webp/curaxcura-grid-image-3.webp"
-                  alt="" />
+                  src="../assets/images/moziwash/webp/moziwash-app-mockup.png"
+                  alt="Mozi Wash mobile app mockup" />
               </div>
             </section>
 
+            <!-- Bundle Builder -->
+            <section class="moziwash_bundle_section">
+              <div class="moziwash_bundle_inner">
+                <img
+                  loading="lazy"
+                  src="../assets/images/moziwash/webp/moziwash-bundle-builder.png"
+                  alt="Mozi Wash bundle builder" />
+              </div>
+            </section>
+
+            <!-- Metrics -->
+            <section class="moziwash_metrics_section">
+              <div class="moziwash_metric" style="background-color: #e2e3ff;">
+                <p class="moziwash_metric_label">Conversion Rate</p>
+                <p class="moziwash_metric_number">+10%</p>
+              </div>
+              <div class="moziwash_metric" style="background-color: #ebf6f6;">
+                <p class="moziwash_metric_label">Retention Rate</p>
+                <p class="moziwash_metric_number">+4.5%</p>
+              </div>
+              <div class="moziwash_metric" style="background-color: #faf3e0;">
+                <p class="moziwash_metric_label">Click-Through Rate (CTR)</p>
+                <p class="moziwash_metric_number">+8%</p>
+              </div>
+            </section>
+
+            <!-- Next / Work links -->
             <section class="casestudy_nav_links">
-              <a
-                href="../houndstooth-gnome/"
-                class="next_casestudy casestudy_nav_link">
+              <a href="../houndstooth-gnome/" class="next_casestudy casestudy_nav_link">
                 <span>NEXT PROJECT</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -463,9 +1608,7 @@
                     stroke-linejoin="round" />
                 </svg>
               </a>
-              <a
-                href="../houndstooth-design-work/"
-                class="work_page casestudy_nav_link">
+              <a href="../houndstooth-design-work/" class="work_page casestudy_nav_link">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="99"
@@ -520,27 +1663,10 @@
                 </div>
                 <div class="social_block">
                   <nav class="social_nav">
-                    <a
-                      href="https://www.behance.net/houndstoothsc"
-                      target="_blank"
-                      >be</a
-                    >
-                    <a
-                      href="https://dribbble.com/Houndstooth"
-                      target="_blank"
-                      >db</a
-                    >
-                    <a
-                      href="https://www.instagram.com/houndstoothsc_official/"
-                      target="_blank"
-                      >ig</a
-                    >
-                    <a
-                      href="https://www.linkedin.com/company/houndstoothdesign/"
-                      target="_blank"
-                      >li</a
-                    >
-
+                    <a href="https://www.behance.net/houndstoothsc" target="_blank">be</a>
+                    <a href="https://dribbble.com/Houndstooth" target="_blank">db</a>
+                    <a href="https://www.instagram.com/houndstoothsc_official/" target="_blank">ig</a>
+                    <a href="https://www.linkedin.com/company/houndstoothdesign/" target="_blank">li</a>
                     <div id="containers">
                       <button class="face-button hidden">
                         <span class="face-container">
@@ -579,30 +1705,13 @@
     </div>
 
     <!-- JavaScript -->
-    <!-- <script src="../assets/js/loader.min.js" defer></script> -->
-    <script
-      src="../assets/js/lozad.min.js"
-      defer></script>
-    <script
-      src="../assets/js/gsap.min.js"
-      defer></script>
-    <script
-      src="../assets/js/ScrollTrigger.min.js"
-      defer></script>
-    <script
-      src="../assets/js/marquee3k.min.js"
-      defer></script>
-    <script
-      src="../assets/js/scrollSmoother.min.js"
-      defer></script>
-    <script
-      src="../assets/js/flickity.min.js"
-      defer></script>
-    <script
-      src="../assets/js/main.js"
-      defer></script>
-    <script
-      src="../assets/js/casestudy.js"
-      defer></script>
+    <script src="../assets/js/lozad.min.js" defer></script>
+    <script src="../assets/js/gsap.min.js" defer></script>
+    <script src="../assets/js/ScrollTrigger.min.js" defer></script>
+    <script src="../assets/js/marquee3k.min.js" defer></script>
+    <script src="../assets/js/scrollSmoother.min.js" defer></script>
+    <script src="../assets/js/flickity.min.js" defer></script>
+    <script src="../assets/js/main.js" defer></script>
+    <script src="../assets/js/casestudy.js" defer></script>
   </body>
 </html>
