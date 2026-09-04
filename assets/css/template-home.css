@@ -1557,14 +1557,21 @@ Featued Case study
     line-height: 22px;
   }
   .featured-case-study-card-title {
+    font-size: 152px;
+    line-height: 110px;
+  }
+}
+
+@media (min-width: 1366px) {
+  .featured-case-study-card-title {
     font-size: 162px;
-    line-height: 130px;
+    line-height: 120px;
   }
 }
 
 @media (min-width: 1400px) {
   .featured-case-study-card-title {
-    font-size: 182px;
+    font-size: 172px;
     line-height: 130px;
   }
 }
