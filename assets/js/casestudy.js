@@ -1,14 +1,16 @@
 document.addEventListener('DOMContentLoaded', function (event) {
-  new Flickity('.casestudy_featured_carousel', {
-    // options
-    cellAlign: 'left',
-    contain: true,
-    draggable: true,
-    freeScroll: false,
-    prevNextButtons: false,
-    pageDots: false,
-    watchCSS: true,
-  });
+  if (document.querySelector('.casestudy_featured_carousel')) {
+    new Flickity('.casestudy_featured_carousel', {
+      // options
+      cellAlign: 'left',
+      contain: true,
+      draggable: true,
+      freeScroll: false,
+      prevNextButtons: false,
+      pageDots: false,
+      watchCSS: true,
+    });
+  }
 
   smoother.effects('.casestudy_mobile_image.img_1', {
     speed: 0.985,
