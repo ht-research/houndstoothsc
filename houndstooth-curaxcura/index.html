@@ -832,6 +832,8 @@
       .curaxcura_applications_overlap {
         display: flex;
         align-items: end;
+        margin-right: -34px;
+        width: calc(100% + 34px);
       }
 
       .curaxcura_applications_photo_card {
@@ -842,16 +844,24 @@
       }
 
       .curaxcura_applications_photo_totes {
-        margin-left: -110px;
-        margin-bottom: 30px;
-        margin-right: -34px;
-        aspect-ratio: 862/458;
+        margin-left: -60px;
+        margin-bottom: 10px;
+        margin-right: -10px;
+        aspect-ratio: 852/410;
         overflow: hidden;
-        width: 63%;
+        width: 68%;
       }
 
       .curaxcura_applications_photo_totes img {
         object-fit: contain;
+      }
+
+      @media (min-width: 768px) {
+        .curaxcura_applications_photo_totes {
+          margin-left: -110px;
+          margin-bottom: 30px;
+          aspect-ratio: 852/450;
+        }
       }
     </style>
   </head>
