@@ -22,23 +22,34 @@ document.addEventListener('DOMContentLoaded', function () {
     yoyo: true,
   });
 
+  // fromTo with explicit start values: .to() reads the start from computed CSS,
+  // which returns "none" while the modal is display:none (before window load),
+  // permanently caching a wrong start and leaving items stuck at translateY(-100px)
   var menuLine = new TimelineLite({ paused: true });
-  menuLine.to('.site_navbar li .site_nav_line', {
-    duration: 0.5,
-    stagger: 0.2,
-    backgroundColor: '#000',
-    width: '100%',
-    ease: 'easy.out',
-  });
+  menuLine.fromTo(
+    '.site_navbar li .site_nav_line',
+    { width: 0 },
+    {
+      duration: 0.5,
+      stagger: 0.2,
+      backgroundColor: '#000',
+      width: '100%',
+      ease: 'easy.out',
+    },
+  );
 
   var menuList = new TimelineLite({ paused: true });
-  menuList.to('.site_navbar li .site_nav_content', {
-    duration: 0.6,
-    stagger: 0.25,
-    opacity: 1,
-    ease: 'easy.out',
-    y: 0,
-  });
+  menuList.fromTo(
+    '.site_navbar li .site_nav_content',
+    { y: -100, opacity: 0 },
+    {
+      duration: 0.6,
+      stagger: 0.25,
+      opacity: 1,
+      ease: 'easy.out',
+      y: 0,
+    },
+  );
 
   // Mega menu
   document.querySelector('.menu_toggle_open').addEventListener('click', () => {
