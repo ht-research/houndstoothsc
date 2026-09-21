@@ -144,9 +144,7 @@
       /* photography fills the ratio boxes it is dropped into */
       .casestudy_header_image img,
       .hy_quote_media img,
-      .hy_ft_screens_grid img,
-      .hy_promo_media img,
-      .hy_step_media img {
+      .hy_ft_screens_grid img {
         display: block;
         width: 100%;
         height: 100%;
@@ -223,17 +221,18 @@
         color: var(--hy-blue);
       }
 
+      /* HT_1: small caps, not all-caps - so the source keeps its natural casing */
       .hy_type_label {
         font-family: var(--primary-font);
         font-size: 12px;
         font-weight: 500;
-        text-transform: uppercase;
+        letter-spacing: 0.04em;
         opacity: 0.85;
       }
 
       .hy_type_name {
         font-family: var(--primary-font);
-        font-size: 26px;
+        font-size: 29px;
         font-weight: 600;
         letter-spacing: -0.02em;
       }
@@ -250,6 +249,7 @@
       .hy_color_hex {
         font-family: var(--hy-mono);
         font-size: clamp(8px, 1.1vw, 13px);
+        font-weight: 500;
         letter-spacing: 0.04em;
         text-transform: uppercase;
         color: #fff;
@@ -258,7 +258,7 @@
 
       /* the pale swatch needs dark ink to stay legible */
       .hy_color_swatch_light .hy_color_hex {
-        color: var(--hy-ink);
+        color: var(--hy-blue);
       }
 
       /* ── flat colour panels that hold screens ── */
@@ -352,63 +352,8 @@
       }
 
       /* ── promo band: phone + logo + cta ── */
-      .hy_promo {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-        max-width: 1440px;
-        margin: 0 auto;
-        align-items: center;
-      }
-
-      .hy_promo_media {
-        width: 100%;
-        aspect-ratio: 842 / 1052;
-      }
-
-      .hy_promo_content {
-        width: 100%;
-        color: #fff;
-        max-width: 430px;
-      }
-
       /* the logo ships as dark artwork on transparency; brightness(0) flattens
          it to solid black and invert(1) turns that white for the red band */
-      .hy_promo_logo {
-        display: block;
-        width: 80%;
-        max-width: 492px;
-        height: auto;
-        filter: brightness(0) invert(1);
-      }
-
-      .hy_promo_text {
-        font-family: var(--primary-font);
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 1.45;
-        max-width: 520px;
-        margin: 22px 0 0;
-      }
-
-      .hy_promo_cta {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 16px;
-        width: 100%;
-        max-width: 430px;
-        margin-top: 24px;
-        padding: 16px 22px;
-        background-color: #fff;
-        border-radius: 6px;
-        font-family: var(--hy-mono);
-        font-size: 13px;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-        color: var(--hy-blue);
-      }
-
       /* ── field shot + ticker ──
          One section owns the blue field: the media sits in its own padded box
          so the ticker stays flush against the bottom edge. It deliberately does
@@ -472,10 +417,33 @@
         background-color: var(--hy-blue);
       }
 
+      /* the promo band ships as one image per breakpoint */
+      .hy_promo_img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .hy_promo_img_desktop {
+        display: none;
+      }
+
       /* ── product facts ──
          One bordered white card: heading + metrics on the left, the three
          preparation steps and the nutrition link on the right. The steps stay
          a three-up row at every width, as in the design. */
+
+      /* the whole facts block ships as one image per breakpoint */
+      .hy_facts_img {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+      }
+
+      .hy_facts_img_desktop {
+        display: none;
+      }
 
       .hy_facts_panel {
         margin-top: -40px;
@@ -484,125 +452,7 @@
         z-index: 1;
       }
 
-      .hy_facts {
-        max-width: 1440px;
-        margin: 0 auto;
-        background-color: #fff;
-        border: 1px solid var(--hy-blue);
-        border-radius: 20px;
-        padding: 24px 20px;
-        display: flex;
-        flex-direction: column;
-        gap: 28px;
-      }
-
-      .hy_facts_heading {
-        font-family: var(--primary-font);
-        font-size: 28px;
-        font-weight: 700;
-        line-height: 1.2;
-        letter-spacing: -0.03em;
-        color: var(--hy-blue);
-      }
-
-      .hy_facts_metrics {
-        display: flex;
-        align-items: center;
-        margin-top: 28px;
-      }
-
-      .hy_metric {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-      }
-
-      .hy_metric + .hy_metric {
-        margin-left: 24px;
-        padding-left: 24px;
-        border-left: 2px dotted var(--hy-blue);
-      }
-
-      .hy_metric_num {
-        font-family: var(--primary-font);
-        font-size: 56px;
-        font-weight: 500;
-        line-height: 1;
-        letter-spacing: -0.03em;
-        color: var(--hy-blue);
-      }
-
-      .hy_metric_label {
-        font-family: var(--hy-mono);
-        font-size: 13px;
-        line-height: 1.35;
-        color: var(--hy-blue);
-      }
-
-      .hy_steps {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 8px;
-      }
-
-      .hy_step {
-        background-color: #f3f4f6;
-        border-radius: 10px;
-        padding: 8px;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-      }
-
       /* the index sits at the top of the row, not on the title's baseline */
-      .hy_step_head {
-        display: flex;
-        align-items: flex-start;
-        gap: 5px;
-      }
-
-      .hy_step_index {
-        font-family: var(--hy-mono);
-        font-size: 8px;
-        line-height: 1.1;
-        color: var(--hy-blue);
-      }
-
-      .hy_step_title {
-        font-family: var(--primary-font);
-        font-size: 15px;
-        font-weight: 500;
-        line-height: 1;
-        letter-spacing: -0.02em;
-        color: var(--hy-blue);
-      }
-
-      .hy_step_media {
-        aspect-ratio: 5 / 4;
-        border-radius: 6px;
-        overflow: hidden;
-      }
-
-      .hy_step_text {
-        font-family: var(--primary-font);
-        font-size: 12px;
-        font-weight: 500;
-        line-height: 1.35;
-        color: var(--hy-ink);
-      }
-
-      .hy_facts_link {
-        display: inline-block;
-        margin-top: 16px;
-        font-family: var(--hy-mono);
-        font-size: 12px;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-        color: var(--hy-blue);
-        text-decoration: underline;
-        text-underline-offset: 4px;
-      }
-
       /* ── everyone collage ──
          Three flat screenshots composed on a pale blue field. Mobile stacks them
          with a slight overlap; desktop positions them by percentage inside a
@@ -733,8 +583,12 @@
           margin-bottom: -120px;
         }
 
-        .hy_facts_heading {
-          font-size: 40px;
+        .hy_facts_img_desktop {
+          display: block;
+        }
+
+        .hy_facts_img_mobile {
+          display: none;
         }
 
         .hy_showcase {
@@ -765,21 +619,12 @@
           justify-self: end;
         }
 
-        .hy_promo {
-          flex-direction: row;
-          align-items: end;
-          justify-content: space-between;
-          gap: 60px;
+        .hy_promo_img_desktop {
+          display: block;
         }
 
-        .hy_promo_media {
-          width: 48%;
-          flex-shrink: 0;
-        }
-
-        .hy_promo_text {
-          font-size: 16px;
-          margin-top: 28px;
+        .hy_promo_img_mobile {
+          display: none;
         }
 
         .hy_everyone_panel {
@@ -838,8 +683,15 @@
           grid-row: 2;
         }
 
+        /* HT_2 */
         .hy_type_name {
-          font-size: 40px;
+          font-size: 48px;
+          font-weight: 500;
+        }
+
+        /* HT_3 */
+        .hy_color_hex {
+          font-size: 20px;
         }
 
         .hy_panel {
@@ -894,75 +746,7 @@
           margin: 0 40px;
         }
 
-        .hy_facts {
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: stretch;
-          gap: 60px;
-          padding: 44px 40px;
-          border-radius: 28px;
-        }
-
         /* heading pinned top, metrics pinned bottom */
-        .hy_facts_intro {
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-        }
-
-        .hy_facts_steps {
-          width: 46%;
-          flex-shrink: 0;
-        }
-
-        .hy_facts_heading {
-          font-size: 52px;
-        }
-
-        .hy_facts_metrics {
-          margin-top: 60px;
-        }
-
-        .hy_metric_num {
-          font-size: 76px;
-        }
-
-        .hy_metric_label {
-          font-size: 14px;
-        }
-
-        .hy_metric + .hy_metric {
-          margin-left: 34px;
-          padding-left: 34px;
-        }
-
-        .hy_steps {
-          gap: 12px;
-        }
-
-        .hy_step {
-          padding: 10px;
-          border-radius: 12px;
-        }
-
-        .hy_step_title {
-          font-size: 26px;
-        }
-
-        .hy_step_index {
-          font-size: 13px;
-        }
-
-        .hy_step_text {
-          font-size: 14px;
-        }
-
-        .hy_facts_link {
-          font-size: 16px;
-          margin-top: 22px;
-        }
-
         /* percentages below come straight from the comp (1096 x 790 frame) */
         .hy_everyone {
           position: relative;
@@ -1045,6 +829,10 @@
 
         .hy_type_card {
           min-height: 190px;
+        }
+
+        .hy_type_name {
+          font-size: 56px;
         }
 
         .hy_palette {
@@ -1342,45 +1130,21 @@
             </section>
 
             <!-- Promo band -->
-            <section class="hy_panel hy_panel_promo hy_panel_red">
-              <div class="hy_promo">
-                <div class="hy_promo_media">
-                  <img
-                    loading="lazy"
-                    src="../assets/images/hydro365/webp/hydro-promo-1.webp"
-                    alt="hydRo 365 cart and checkout on a phone at a stadium" />
-                </div>
-                <div class="hy_promo_content">
-                  <img
-                    loading="lazy"
-                    class="hy_promo_logo"
-                    src="../assets/images/hydro365/webp/hydro-logo.webp"
-                    alt="hydRo 365"
-                    width="1346"
-                    height="311" />
-                  <p class="hy_promo_text">
-                    Formulated for Indian lifestyles. India&rsquo;s first hydration drink designed
-                    around our climate, pace and demands.
-                  </p>
-                  <span class="hy_promo_cta">
-                    Shop your daily hydration
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="15"
-                      height="15"
-                      viewBox="0 0 15 15"
-                      fill="none"
-                      aria-hidden="true">
-                      <path
-                        d="M3 12L12 3M12 3H5M12 3V10"
-                        stroke="currentColor"
-                        stroke-width="1.6"
-                        stroke-linecap="round"
-                        stroke-linejoin="round" />
-                    </svg>
-                  </span>
-                </div>
-              </div>
+            <section class="hy_panel_promo">
+              <img
+                class="hy_promo_img hy_promo_img_desktop"
+                src="../assets/images/hydro365/webp/hydro-promo.webp"
+                alt="hydRo 365 - formulated for Indian lifestyles, India's first hydration drink designed around our climate, pace and demands"
+                width="2160"
+                height="1169"
+                loading="lazy" />
+              <img
+                class="hy_promo_img hy_promo_img_mobile"
+                src="../assets/images/hydro365/webp/hydro-promo-mob.webp"
+                alt="hydRo 365 - formulated for Indian lifestyles, India's first hydration drink designed around our climate, pace and demands"
+                width="563"
+                height="1347"
+                loading="lazy" />
             </section>
 
             <!-- Marquee -->
@@ -1497,73 +1261,21 @@
             </section>
 
             <!-- Daily hydration facts -->
-            <section class="hy_facts_panel casestudy_cards">
-              <div class="hy_facts">
-                <div class="hy_facts_intro">
-                  <h2 class="hy_facts_heading">
-                    Daily Hydration,<br />
-                    Used by Elite Performers
-                  </h2>
-                  <div class="hy_facts_metrics">
-                    <div class="hy_metric">
-                      <span class="hy_metric_num">0</span>
-                      <span class="hy_metric_label">Added<br />sugar</span>
-                    </div>
-                    <div class="hy_metric">
-                      <span class="hy_metric_num">6</span>
-                      <span class="hy_metric_label">Essential<br />electrolytes</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="hy_facts_steps">
-                  <div class="hy_steps">
-                    <div class="hy_step">
-                      <div class="hy_step_head">
-                        <span class="hy_step_index">01</span>
-                        <span class="hy_step_title">Pour</span>
-                      </div>
-                      <div class="hy_step_media">
-                        <img
-                          loading="lazy"
-                          src="../assets/images/hydro365/webp/hydro-daily-1.webp"
-                          alt="Pouring a hydRo 365 sachet into a glass" />
-                      </div>
-                      <div class="hy_step_text">Empty the full sachet</div>
-                    </div>
-                    <div class="hy_step">
-                      <div class="hy_step_head">
-                        <span class="hy_step_index">02</span>
-                        <span class="hy_step_title">Mix</span>
-                      </div>
-                      <div class="hy_step_media">
-                        <img
-                          loading="lazy"
-                          src="../assets/images/hydro365/webp/hydro-daily-2.webp"
-                          alt="Mixing hydRo 365 in a bottle" />
-                      </div>
-                      <div class="hy_step_text">Add 250-300 ml water</div>
-                    </div>
-                    <div class="hy_step">
-                      <div class="hy_step_head">
-                        <span class="hy_step_index">03</span>
-                        <span class="hy_step_title">Hydrate</span>
-                      </div>
-                      <div class="hy_step_media">
-                        <img
-                          loading="lazy"
-                          src="../assets/images/hydro365/webp/hydro-daily-3.webp"
-                          alt="Drinking hydRo 365" />
-                      </div>
-                      <div class="hy_step_text">Shake well &amp; hydrate</div>
-                    </div>
-                  </div>
-                  <a
-                    class="hy_facts_link"
-                    href="#nutrition"
-                    >View nutritional facts</a
-                  >
-                </div>
-              </div>
+            <section class="hy_facts_panel">
+              <img
+                class="hy_facts_img hy_facts_img_desktop"
+                src="../assets/images/hydro365/webp/hydro-facts.webp"
+                alt="Daily hydration, used by elite performers - zero added sugar, six essential electrolytes, and the pour, mix and hydrate steps"
+                width="2160"
+                height="591"
+                loading="lazy" />
+              <img
+                class="hy_facts_img hy_facts_img_mobile"
+                src="../assets/images/hydro365/webp/hydro-facts-mob.webp"
+                alt="Daily hydration, used by elite performers - zero added sugar, six essential electrolytes, and the pour, mix and hydrate steps"
+                width="563"
+                height="590"
+                loading="lazy" />
             </section>
 
             <!-- A hydrating drink for everyone -->
