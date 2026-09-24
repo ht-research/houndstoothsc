@@ -3,11 +3,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 const smoother = ScrollSmoother.create({
   smooth: 1.25,
   smoothTouch: 0,
-  // normalizeScroll takes touch scrolling onto GSAP's own rAF loop. With
-  // smoothTouch disabled there is no smoothing to absorb that takeover, so the
-  // native momentum scroll and GSAP's position updates fight each other and the
-  // page judders on phones. Pointer devices keep it (it fixes their quirks).
-  normalizeScroll: !ScrollTrigger.isTouch,
+  normalizeScroll: true,
 });
 
 document.addEventListener('DOMContentLoaded', function () {
