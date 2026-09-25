@@ -4,7 +4,6 @@ const smoother = ScrollSmoother.create({
   smooth: 1.25,
   smoothTouch: 0.1,
   normalizeScroll: true,
-  effects: true,
 });
 
 document.addEventListener('DOMContentLoaded', function () {
