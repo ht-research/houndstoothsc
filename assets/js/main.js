@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
             trigger: scaleImage,
             start: 'top 80%',
             end: 'bottom center',
-            scrub: true,
+            scrub: 1,
           },
         },
       );

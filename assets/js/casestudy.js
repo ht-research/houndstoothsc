@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
         trigger: scaleImage,
         start: 'top bottom',
         end: 'bottom top',
-        scrub: true,
+        scrub: 1,
       },
     });
   });
@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
         trigger: section,
         start: 'top bottom',
         end: 'bottom top',
-        scrub: true,
+        scrub: 1,
       },
     },
   );
