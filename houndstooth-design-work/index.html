@@ -756,7 +756,16 @@
         }
       });
 
-      AOS.init();
+      // once: AOS defaults to once:false, which re-hid every card that had
+      // already animated as soon as you scrolled back up past it.
+      // refresh on load: AOS only listens for scroll/resize/orientationchange,
+      // so the lazy-loaded cover images shifting the layout left its cached
+      // offsets stale and cards revealed at the wrong scroll position.
+      AOS.init({ once: true });
+
+      window.addEventListener("load", function () {
+        AOS.refresh();
+      });
     </script>
   </body>
 </html>
