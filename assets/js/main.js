@@ -1,15 +1,10 @@
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-// Phones fire a resize event every time the address bar slides in or out. Each
-// one makes ScrollTrigger recalculate every trigger and reposition the smooth
-// wrapper mid-scroll, which is what the juddering is. ScrollTrigger gates this
-// option to isTouch === 1 internally, so pointer devices are untouched.
-ScrollTrigger.config({ ignoreMobileResize: true });
-
 const smoother = ScrollSmoother.create({
   smooth: 1.25,
-  smoothTouch: false,
+  smoothTouch: 0.1,
   normalizeScroll: true,
+  effects: true,
 });
 
 document.addEventListener('DOMContentLoaded', function () {
