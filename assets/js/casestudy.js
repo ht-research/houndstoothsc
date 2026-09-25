@@ -12,21 +12,24 @@ document.addEventListener('DOMContentLoaded', function (event) {
     });
   }
 
-  smoother.effects('.casestudy_mobile_image.img_1', {
-    speed: 0.985,
-  });
+  // smoother is null on touch-only devices (see main.js) - no parallax there
+  if (smoother) {
+    smoother.effects('.casestudy_mobile_image.img_1', {
+      speed: 0.985,
+    });
 
-  smoother.effects('.casestudy_mobile_image.img_2', {
-    speed: 1.005,
-  });
+    smoother.effects('.casestudy_mobile_image.img_2', {
+      speed: 1.005,
+    });
 
-  smoother.effects('.casestudy_mobile_image.img_3', {
-    speed: 1.003,
-  });
+    smoother.effects('.casestudy_mobile_image.img_3', {
+      speed: 1.003,
+    });
 
-  smoother.effects('.casestudy_mobile_image.img_4', {
-    speed: 0.935,
-  });
+    smoother.effects('.casestudy_mobile_image.img_4', {
+      speed: 0.935,
+    });
+  }
 
   // scale image animation
   const scaleImages = document.querySelectorAll('[data-animation="scale"]');

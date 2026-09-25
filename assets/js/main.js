@@ -1,10 +1,17 @@
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-const smoother = ScrollSmoother.create({
-  smooth: 1.25,
-  smoothTouch: 0,
-  normalizeScroll: true,
-});
+// Touch-only devices (phones/tablets) scroll natively.
+// ScrollSmoother with normalizeScroll moves scrolling onto the JS main thread,
+// so any main-thread stall freezes the page mid-gesture and then lurches.
+// isTouch: 0 = no touch, 1 = touch only, 2 = touch + mouse (touch laptops keep smoothing).
+const smoother =
+  ScrollTrigger.isTouch === 1
+    ? null
+    : ScrollSmoother.create({
+        smooth: 1.25,
+        smoothTouch: 0,
+        normalizeScroll: true,
+      });
 
 document.addEventListener('DOMContentLoaded', function () {
   // marquee init
