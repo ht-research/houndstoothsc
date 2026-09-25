@@ -727,12 +727,21 @@
         ".work_header_section .heading span"
       );
 
-      // scroll distance at which the bottom of the header reaches the top of
-      // the viewport. Cached so the scroll handler never reads layout.
+      // Fraction of the header the fade spans. 1 held the heading visible
+      // until it had completely left the screen; the original, tied to half
+      // the viewport, blanked it far too early. 0.8 sits between the two.
+      // This is the number to tune: raise it to keep the heading longer,
+      // lower it to clear it sooner.
+      const HEADING_FADE_SPAN = 0.8;
+
+      // scroll distance over which the heading fades out, measured against the
+      // header itself. Cached so the scroll handler never reads layout.
       let headingRange = 0;
 
       function measureWorkHeading() {
-        headingRange = headerSection.offsetTop + headerSection.offsetHeight;
+        headingRange =
+          (headerSection.offsetTop + headerSection.offsetHeight) *
+          HEADING_FADE_SPAN;
       }
 
       function updateWorkHeading() {
