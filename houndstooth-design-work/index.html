@@ -717,18 +717,33 @@
       // The heading tracks the scroll directly. It used to snap to its end
       // transform the moment scrollY passed 0 and only the opacity was
       // progressive, so it never followed the scroll.
+      //
+      // The fade is measured against the header section itself rather than
+      // half the viewport: tied to the viewport the heading hit opacity 0
+      // while it was still filling the screen, leaving a blank band. Now it
+      // reaches 0 exactly as the section clears the top of the viewport.
+      const headerSection = document.querySelector(".work_header_section");
       const spans = document.querySelectorAll(
         ".work_header_section .heading span"
       );
 
+      // scroll distance at which the bottom of the header reaches the top of
+      // the viewport. Cached so the scroll handler never reads layout.
+      let headingRange = 0;
+
+      function measureWorkHeading() {
+        headingRange = headerSection.offsetTop + headerSection.offsetHeight;
+      }
+
       function updateWorkHeading() {
-        const range = window.innerHeight / 2;
-        const progress = Math.min(Math.max(window.scrollY / range, 0), 1);
+        const progress = headingRange
+          ? Math.min(Math.max(window.scrollY / headingRange, 0), 1)
+          : 0;
 
         const translateY = -30 * progress; // 0% -> -30%
         const scale = 1 + 0.1 * progress; // 1 -> 1.1
-        // hold until halfway, then fade out - same curve as before, clamped
-        const opacity = Math.min(Math.max(2 - 1.5 * progress, 0), 1);
+        // hold over the first half, then fade to 0 as the heading leaves
+        const opacity = Math.min(Math.max(2 - 2 * progress, 0), 1);
 
         spans.forEach(function (span) {
           span.style.transform =
@@ -738,7 +753,16 @@
       }
 
       window.addEventListener("scroll", updateWorkHeading, { passive: true });
-      window.addEventListener("resize", updateWorkHeading);
+      window.addEventListener("resize", function () {
+        measureWorkHeading();
+        updateWorkHeading();
+      });
+      window.addEventListener("load", function () {
+        measureWorkHeading();
+        updateWorkHeading();
+      });
+
+      measureWorkHeading();
       updateWorkHeading();
 
       // once stays false so the cards replay their animation every time they
