@@ -1,17 +1,18 @@
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-// Touch-only devices (phones/tablets) scroll natively.
-// ScrollSmoother with normalizeScroll moves scrolling onto the JS main thread,
-// so any main-thread stall freezes the page mid-gesture and then lurches.
-// isTouch: 0 = no touch, 1 = touch only, 2 = touch + mouse (touch laptops keep smoothing).
-const smoother =
-  ScrollTrigger.isTouch === 1
-    ? null
-    : ScrollSmoother.create({
-        smooth: 1.25,
-        smoothTouch: 0,
-        normalizeScroll: true,
-      });
+// Smooth scrolling is disabled site-wide. ScrollSmoother with normalizeScroll
+// drives scrolling from the JS main thread, so any main-thread stall freezes the
+// page mid-gesture and then lurches. Every page now uses the browser's own
+// native scrolling. Flip this flag to true to bring smooth scrolling back.
+const ENABLE_SMOOTH_SCROLL = false;
+
+const smoother = ENABLE_SMOOTH_SCROLL
+  ? ScrollSmoother.create({
+      smooth: 1.25,
+      smoothTouch: 0,
+      normalizeScroll: true,
+    })
+  : null;
 
 document.addEventListener('DOMContentLoaded', function () {
   // marquee init

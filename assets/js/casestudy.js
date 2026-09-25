@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     });
   }
 
-  // smoother is null on touch-only devices (see main.js) - no parallax there
+  // smoother is null while smooth scrolling is off (see main.js) - no parallax then
   if (smoother) {
     smoother.effects('.casestudy_mobile_image.img_1', {
       speed: 0.985,
