@@ -12,21 +12,24 @@ document.addEventListener('DOMContentLoaded', function (event) {
     });
   }
 
-  smoother.effects('.casestudy_mobile_image.img_1', {
-    speed: 0.985,
-  });
+  // smoother is null while smooth scrolling is off (see main.js) - no parallax then
+  if (smoother) {
+    smoother.effects('.casestudy_mobile_image.img_1', {
+      speed: 0.985,
+    });
 
-  smoother.effects('.casestudy_mobile_image.img_2', {
-    speed: 1.005,
-  });
+    smoother.effects('.casestudy_mobile_image.img_2', {
+      speed: 1.005,
+    });
 
-  smoother.effects('.casestudy_mobile_image.img_3', {
-    speed: 1.003,
-  });
+    smoother.effects('.casestudy_mobile_image.img_3', {
+      speed: 1.003,
+    });
 
-  smoother.effects('.casestudy_mobile_image.img_4', {
-    speed: 0.935,
-  });
+    smoother.effects('.casestudy_mobile_image.img_4', {
+      speed: 0.935,
+    });
+  }
 
   // scale image animation
   const scaleImages = document.querySelectorAll('[data-animation="scale"]');
@@ -39,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
         trigger: scaleImage,
         start: 'top bottom',
         end: 'bottom top',
-        scrub: true,
+        scrub: 1,
       },
     });
   });
@@ -177,7 +180,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
         trigger: section,
         start: 'top bottom',
         end: 'bottom top',
-        scrub: true,
+        scrub: 1,
       },
     },
   );
