@@ -56,9 +56,16 @@ document.addEventListener('DOMContentLoaded', function (event) {
   const restAnimationClass = 'scroll-animation-rest';
   const headingAnimationClass = 'scroll-animation-heading';
   var scrollPosition = 0;
+  // Within this many pixels of the top the header is always in its resting state.
+  // Scroll direction alone is not enough on mobile: the URL bar collapsing and
+  // rubber-band overscroll produce small downward deltas while the page is
+  // already at the top, which re-added the class and left the header stuck in
+  // its animated state until the next real scroll.
+  const topRestZone = 80;
+
   window.addEventListener('scroll', () => {
     const currentScroll = window.scrollY;
-    if (currentScroll > scrollPosition) {
+    if (currentScroll > topRestZone && currentScroll > scrollPosition) {
       if (!headerImage.classList.contains(animationClass)) {
         headerImage.classList.add(animationClass);
       }
