@@ -186,7 +186,7 @@
                 class="our_work_card"
                 data-aos="fade-up"
                 data-aos-duration="1000"
-                data-aos-delay="300">
+                data-aos-delay="0">
                 <a class="our_work_card_link" href="../houndstooth-curaxcura/">
                   <div class="our_work_card_image">
                     <img
@@ -230,7 +230,7 @@
                 class="our_work_card"
                 data-aos="fade-up"
                 data-aos-duration="1000"
-                data-aos-delay="300">
+                data-aos-delay="200">
                 <a class="our_work_card_link" href="../houndstooth-gnome/">
                   <div class="our_work_card_image">
                     <img
@@ -293,7 +293,7 @@
                 class="our_work_card"
                 data-aos="fade-up"
                 data-aos-duration="1000"
-                data-aos-delay="300">
+                data-aos-delay="0">
                 <a class="our_work_card_link" href="../houndstooth-hydro365/">
                   <div class="our_work_card_image">
                     <img
@@ -339,7 +339,7 @@
                 class="our_work_card"
                 data-aos="fade-up"
                 data-aos-duration="1000"
-                data-aos-delay="300">
+                data-aos-delay="200">
                 <a class="our_work_card_link" href="../houndstooth-recess/">
                   <div class="our_work_card_image">
                     <img
@@ -384,7 +384,7 @@
                 class="our_work_card"
                 data-aos="fade-up"
                 data-aos-duration="1000"
-                data-aos-delay="300">
+                data-aos-delay="0">
                 <a class="our_work_card_link" href="../houndstooth-fitelo/">
                   <div class="our_work_card_image">
                     <img
@@ -430,7 +430,7 @@
                 class="our_work_card"
                 data-aos="fade-up"
                 data-aos-duration="1000"
-                data-aos-delay="300">
+                data-aos-delay="200">
                 <a class="our_work_card_link" href="../houndstooth-hedleyandbennett/">
                   <div class="our_work_card_image">
                     <img
@@ -475,7 +475,7 @@
                 class="our_work_card"
                 data-aos="fade-up"
                 data-aos-duration="1000"
-                data-aos-delay="300">
+                data-aos-delay="0">
                 <a class="our_work_card_link" href="../houndstooth-shomont/">
                   <div class="our_work_card_image">
                     <img
@@ -521,7 +521,7 @@
                 class="our_work_card"
                 data-aos="fade-up"
                 data-aos-duration="1000"
-                data-aos-delay="300">
+                data-aos-delay="200">
                 <a class="our_work_card_link" href="../houndstooth-mauvegas/">
                   <div class="our_work_card_image">
                     <img
@@ -714,54 +714,36 @@
     <script src="../assets/js/main.js" defer></script>
     <script src="../assets/js/aos.min.js"></script>
     <script>
-      let scrolled = false;
+      // The heading tracks the scroll directly. It used to snap to its end
+      // transform the moment scrollY passed 0 and only the opacity was
+      // progressive, so it never followed the scroll.
+      const spans = document.querySelectorAll(
+        ".work_header_section .heading span"
+      );
 
-      const spans = document.querySelectorAll(".work_header_section .heading span");
+      function updateWorkHeading() {
+        const range = window.innerHeight / 2;
+        const progress = Math.min(Math.max(window.scrollY / range, 0), 1);
 
-      window.addEventListener("scroll", function () {
-        const scrollTop = window.scrollY;
-        const viewportHeight = window.innerHeight;
+        const translateY = -30 * progress; // 0% -> -30%
+        const scale = 1 + 0.1 * progress; // 1 -> 1.1
+        // hold until halfway, then fade out - same curve as before, clamped
+        const opacity = Math.min(Math.max(2 - 1.5 * progress, 0), 1);
 
-        if (!scrolled && scrollTop > 0) {
-          // Scale the elements to 1.1 and move them up
-          spans.forEach((span) => {
-            span.style.transform = "translate(0, -30%) scale(1.1)";
-            // span.style.opacity = 0;
-          });
+        spans.forEach(function (span) {
+          span.style.transform =
+            "translate(0, " + translateY + "%) scale(" + scale + ")";
+          span.style.opacity = opacity;
+        });
+      }
 
-          scrolled = true;
-        } else if (scrolled && scrollTop === 0) {
-          // Reset the elements to their initial state
-          spans.forEach((span) => {
-            span.style.transform = "translate(0, 0) scale(1)";
-            // span.style.opacity = 1;
-          });
+      window.addEventListener("scroll", updateWorkHeading, { passive: true });
+      window.addEventListener("resize", updateWorkHeading);
+      updateWorkHeading();
 
-          scrolled = false;
-        }
-
-        // Calculate the distance scrolled relative to the viewport height
-        const scrollPercentage = (scrollTop / (viewportHeight / 2)) * 100;
-
-        // Fade out the elements when they pass 50% of the viewport
-        if (scrollPercentage >= 50) {
-          const opacity = 1 - (scrollPercentage - 50) / 50;
-          spans.forEach((span) => {
-            span.style.opacity = opacity;
-          });
-        } else {
-          spans.forEach((span) => {
-            span.style.opacity = 1;
-          });
-        }
-      });
-
-      // once: AOS defaults to once:false, which re-hid every card that had
-      // already animated as soon as you scrolled back up past it.
-      // refresh on load: AOS only listens for scroll/resize/orientationchange,
-      // so the lazy-loaded cover images shifting the layout left its cached
-      // offsets stale and cards revealed at the wrong scroll position.
-      AOS.init({ once: true });
+      // once stays false so the cards replay their animation every time they
+      // are scrolled into view.
+      AOS.init();
 
       window.addEventListener("load", function () {
         AOS.refresh();
