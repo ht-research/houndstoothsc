@@ -55,13 +55,13 @@
       href="https://fonts.gstatic.com"
       crossorigin />
     <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" />
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Syne:wght@400..800&display=swap"
+      rel="stylesheet" />
     <link
       href="../assets/css/fonts.css"
       rel="preload"
       as="style"
-      onload="this.rel='stylesheet'" />
+      onload="this.rel = 'stylesheet'" />
     <noscript
       ><link
         rel="stylesheet"
@@ -83,7 +83,7 @@
       id="site-page"
       class="site">
       <!-- Header -->
-      <header class="site_header">
+      <header class="site_header site_header_about">
         <div class="site_header_wrapper">
           <a
             class="site_brand"
@@ -230,7 +230,7 @@
                   <h1 class="heading"></h1>
                 </div>
                 <div>
-                  <h2 class="heading2"></h2>
+                  <h1 class="heading2"></h1>
                 </div>
               </div>
             </div>
@@ -238,113 +238,72 @@
             <div class="about_subheader_block">
               <p class="reveal-text-container items-center">
                 <span class="text-div"
-                  >Houndstooth is an award winning studio delivering design solutions to global
-                  brands when not thinking about quirky footers.
+                  >Houndstooth is an award winning<br />
+                  studio delivering design solutions to global brands<br />
+                  when not thinking about quirky footers.
                 </span>
               </p>
-
-              <div class="mask-container"></div>
             </div>
           </section>
 
-          <!-- Offered Services Section -->
+          <!-- Services Section -->
           <section class="about_services_section">
-            <h2>
-              <div class="font_1">Offered</div>
-              <div class="font_2">Services</div>
-            </h2>
-
-            <div class="services_grid">
-              <div class="service service_1">
-                <div class="service_blocks">
-                  <div class="service_block block_1">
-                    <img
-                      loading="lazy"
-                      src="../assets/images/about/webp/about-service-branding-1.webp"
-                      alt="service-branding-1" />
-                  </div>
-                  <div class="service_block block_2 blank_block"></div>
-                  <div class="service_block block_3">
-                    <img
-                      loading="lazy"
-                      src="../assets/images/about/webp/about-service-branding-2.webp"
-                      alt="service-branding-2" />
-                  </div>
-                </div>
-                <div class="service_name">
-                  <span>Branding</span>
-                </div>
-              </div>
-
-              <div class="service service_2 service_reverse">
-                <div class="service_blocks">
-                  <div class="service_block block_1 blank_block"></div>
-                  <div class="service_block block_2">
-                    <img
-                      loading="lazy"
-                      src="../assets/images/about/webp/about-service-print-1.webp"
-                      alt="service-print-1" />
-                  </div>
-                  <div class="service_block block_3 blank_block"></div>
-                  <div class="service_block block_4">
-                    <img
-                      loading="lazy"
-                      src="../assets/images/about/webp/about-service-print-2.webp"
-                      alt="service-print-2" />
-                  </div>
-                </div>
-                <div class="service_name">
-                  <span>Print</span>
-                </div>
-              </div>
-
-              <div class="service service_3">
-                <div class="service_blocks">
-                  <div class="service_block block_1 blank_block"></div>
-                  <div class="service_block block_2">
-                    <img
-                      loading="lazy"
-                      src="../assets/images/about/webp/about-service-uiux-1.webp"
-                      alt="service-uiux-1" />
-                  </div>
-                </div>
-                <div class="service_name">
-                  <span>Digital Design</span>
-                </div>
-              </div>
-
-              <div class="service service_4 service_reverse">
-                <div class="service_blocks">
-                  <div class="service_block block_1 blank_block"></div>
-                  <div class="service_block block_2">
-                    <img
-                      loading="lazy"
-                      src="../assets/images/about/webp/about-service-webdev-1.webp"
-                      alt="service-webdev-1" />
-                  </div>
-                  <div class="service_block block_3 blank_block"></div>
-                </div>
-                <div class="service_name">
-                  <span>Development</span>
-                </div>
-              </div>
-
-              <div class="service service_5">
-                <div class="service_blocks">
-                  <div class="service_block block_1 blank_block"></div>
-                  <div class="service_block block_2">
-                    <img
-                      loading="lazy"
-                      src="../assets/images/about/webp/about-service-strategy-1.webp"
-                      alt="service-strategy-1" />
-                  </div>
-                  <div class="service_block block_3 blank_block"></div>
-                </div>
-                <div class="service_name">
-                  <span>Strategy</span>
-                </div>
-              </div>
+            <!-- placeholder: swap for the 10x award winner badge -->
+            <div class="services_award">
+              <img
+                loading="lazy"
+                src="../assets/images/about/webp/about-service-award.webp"
+                alt="10x award winner" />
             </div>
+
+            <!-- placeholder: swap for the iridescent blob -->
+            <img
+              class="services_blob"
+              loading="lazy"
+              src="../assets/images/about/webp/about-service-vector-1.webp"
+              alt=""
+              aria-hidden="true" />
+
+            <div class="services_row">
+              <h3 class="services_row_title">Branding<br />&amp; Packaging</h3>
+              <ul class="services_row_list">
+                <li>art direction</li>
+                <li>visual identity design</li>
+                <li>brand guideline books</li>
+                <li>packaging design</li>
+                <li>print ready design systems</li>
+                <li>logo design</li>
+              </ul>
+            </div>
+
+            <div class="services_row">
+              <h3 class="services_row_title">Website<br />UI/UX Design</h3>
+              <ul class="services_row_list">
+                <li>website design systems</li>
+                <li>e-commerce /shopify design</li>
+                <li>responsive designs</li>
+                <li>website audits</li>
+                <li>landing page design</li>
+                <li>emailer design</li>
+                <li>high fidelity prototypes</li>
+                <li>amazon content design</li>
+              </ul>
+            </div>
+
+            <div class="services_row">
+              <h3 class="services_row_title">Development</h3>
+              <ul class="services_row_list">
+                <li>custom shopify development</li>
+                <li>tech audits</li>
+                <li>third party integrations</li>
+                <li>platform &amp; data migration</li>
+                <li>post launch support</li>
+                <li>qa and bug testing</li>
+                <li>api integrations</li>
+              </ul>
+            </div>
+
+            <div class="services_wordmark">Services</div>
           </section>
 
           <!-- Guild Values Section -->
@@ -361,28 +320,7 @@
                 capital firm. Guild backs growth-stage teams who can evolve into great companies and
                 Houndstooth provides human-centred experience design and strategy services to them.
                 <span>
-                  <svg
-                    width="720"
-                    height="39"
-                    viewBox="0 0 720 39"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M4 12.3944C77.8288 8.00573 296.91 0.544912 582.602 5.81137"
-                      stroke="#080AF0"
-                      stroke-width="8"
-                      stroke-linecap="round" />
-                    <path
-                      d="M164.021 25.2527C216.493 20.2869 373.52 9.50159 581.857 6.08687"
-                      stroke="#080AF0"
-                      stroke-width="8"
-                      stroke-linecap="round" />
-                    <path
-                      d="M165.757 25.1616C236.737 22.7604 446.075 20.9166 715.579 32.7498"
-                      stroke="#080AF0"
-                      stroke-width="8"
-                      stroke-linecap="round" />
-                  </svg>
+                  <img src="../assets/images/about/webp/about-union.webp" />
                 </span>
               </p>
               <span class="design_element">GUILD CAPITAL</span>
@@ -675,13 +613,265 @@
           <section class="about_team_section">
             <div class="team_header">
               <h2>
-                <div class="font_1">Our</div>
-                <div class="font_2">Team</div>
+                <div class="font_1">MEET</div>
+                <div class="font_2">US</div>
               </h2>
 
               <p>we are a team of diverse individuals who are driven by culture and coffee</p>
             </div>
             <div class="team_members">
+              <div class="band_design_element">
+                <div
+                  id="tagline1"
+                  class="band_tagline band_1 marquee3k diagonal-marquee"
+                  data-speed="1.5">
+                  <div class="casestudy_tagline_text">
+                    <div class="marquee_flex">
+                      <span class="text_style_1">Core team</span>
+                      <span class="text_style_2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="40"
+                          height="40"
+                          viewBox="0 0 40 40"
+                          fill="none">
+                          <path
+                            d="M12.8909 12.2169L7.27829 17.3468L2.12793 11.7334L12.8909 12.2169Z"
+                            fill="#161616" />
+                          <path
+                            d="M7.27829 17.3476L12.9122 12.1983L18.0617 17.8321C14.9256 20.679 10.1057 20.4624 7.27829 17.3476Z"
+                            fill="#161616" />
+                          <path
+                            d="M12.8925 12.2169L18.5264 7.06758L13.377 1.43359L12.8925 12.2169Z"
+                            fill="#161616" />
+                          <path
+                            d="M18.5245 7.06742L12.8906 12.2168L18.04 17.8507C21.1353 15.002 21.3528 10.1618 18.5245 7.06742Z"
+                            fill="#161616" />
+                          <path
+                            d="M28.1274 12.9015L22.978 7.26774L28.6119 2.1182L28.1274 12.9015Z"
+                            fill="#161616" />
+                          <path
+                            d="M22.9774 7.26872L28.1268 12.9025L22.4929 18.052C19.6655 14.9372 19.883 10.097 22.9774 7.26872Z"
+                            fill="#161616" />
+                          <path
+                            d="M28.1279 12.9014L33.2579 18.5139L38.8909 13.3849L28.1279 12.9014Z"
+                            fill="#161616" />
+                          <path
+                            d="M33.2575 18.5137L28.1081 12.8799L22.4741 18.0293C25.3423 21.1459 30.1622 21.3624 33.2575 18.5137Z"
+                            fill="#161616" />
+                          <path
+                            d="M12.2078 27.4327L7.07867 21.7998L1.44479 26.9492L12.2078 27.4327Z"
+                            fill="#161616" />
+                          <path
+                            d="M7.07893 21.7991L12.2284 27.4329L17.8624 22.2836C14.9932 19.1874 10.1733 18.9708 7.07893 21.7991Z"
+                            fill="#161616" />
+                          <path
+                            d="M12.2085 27.4316L17.3579 33.0656L11.725 38.1946L12.2085 27.4316Z"
+                            fill="#161616" />
+                          <path
+                            d="M17.3564 33.0666L12.207 27.4326L17.8409 22.2832C20.6683 25.398 20.4517 30.2178 17.3564 33.0666Z"
+                            fill="#161616" />
+                          <path
+                            d="M27.4434 28.1162L21.8095 33.2658L26.9599 38.8792L27.4434 28.1162Z"
+                            fill="#161616" />
+                          <path
+                            d="M21.8098 33.2659L27.4437 28.1164L22.2942 22.4826C19.199 25.3313 18.9824 30.1511 21.8098 33.2659Z"
+                            fill="#161616" />
+                          <path
+                            d="M27.4448 28.1171L33.0583 22.9669L38.2078 28.6007L27.4448 28.1171Z"
+                            fill="#161616" />
+                          <path
+                            d="M33.0567 22.9662L27.4228 28.1155L22.2733 22.4817C25.4085 19.6553 30.2284 19.8718 33.0567 22.9662Z"
+                            fill="#161616" />
+                        </svg>
+                      </span>
+                      <span class="text_style_1">Core team</span>
+                      <span class="text_style_2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="40"
+                          height="40"
+                          viewBox="0 0 40 40"
+                          fill="none">
+                          <path
+                            d="M12.8909 12.2169L7.27829 17.3468L2.12793 11.7334L12.8909 12.2169Z"
+                            fill="#161616" />
+                          <path
+                            d="M7.27829 17.3476L12.9122 12.1983L18.0617 17.8321C14.9256 20.679 10.1057 20.4624 7.27829 17.3476Z"
+                            fill="#161616" />
+                          <path
+                            d="M12.8925 12.2169L18.5264 7.06758L13.377 1.43359L12.8925 12.2169Z"
+                            fill="#161616" />
+                          <path
+                            d="M18.5245 7.06742L12.8906 12.2168L18.04 17.8507C21.1353 15.002 21.3528 10.1618 18.5245 7.06742Z"
+                            fill="#161616" />
+                          <path
+                            d="M28.1274 12.9015L22.978 7.26774L28.6119 2.1182L28.1274 12.9015Z"
+                            fill="#161616" />
+                          <path
+                            d="M22.9774 7.26872L28.1268 12.9025L22.4929 18.052C19.6655 14.9372 19.883 10.097 22.9774 7.26872Z"
+                            fill="#161616" />
+                          <path
+                            d="M28.1279 12.9014L33.2579 18.5139L38.8909 13.3849L28.1279 12.9014Z"
+                            fill="#161616" />
+                          <path
+                            d="M33.2575 18.5137L28.1081 12.8799L22.4741 18.0293C25.3423 21.1459 30.1622 21.3624 33.2575 18.5137Z"
+                            fill="#161616" />
+                          <path
+                            d="M12.2078 27.4327L7.07867 21.7998L1.44479 26.9492L12.2078 27.4327Z"
+                            fill="#161616" />
+                          <path
+                            d="M7.07893 21.7991L12.2284 27.4329L17.8624 22.2836C14.9932 19.1874 10.1733 18.9708 7.07893 21.7991Z"
+                            fill="#161616" />
+                          <path
+                            d="M12.2085 27.4316L17.3579 33.0656L11.725 38.1946L12.2085 27.4316Z"
+                            fill="#161616" />
+                          <path
+                            d="M17.3564 33.0666L12.207 27.4326L17.8409 22.2832C20.6683 25.398 20.4517 30.2178 17.3564 33.0666Z"
+                            fill="#161616" />
+                          <path
+                            d="M27.4434 28.1162L21.8095 33.2658L26.9599 38.8792L27.4434 28.1162Z"
+                            fill="#161616" />
+                          <path
+                            d="M21.8098 33.2659L27.4437 28.1164L22.2942 22.4826C19.199 25.3313 18.9824 30.1511 21.8098 33.2659Z"
+                            fill="#161616" />
+                          <path
+                            d="M27.4448 28.1171L33.0583 22.9669L38.2078 28.6007L27.4448 28.1171Z"
+                            fill="#161616" />
+                          <path
+                            d="M33.0567 22.9662L27.4228 28.1155L22.2733 22.4817C25.4085 19.6553 30.2284 19.8718 33.0567 22.9662Z"
+                            fill="#161616" />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  id="tagline2"
+                  class="band_tagline band_2 marquee3k reverse-diagonal-marquee"
+                  data-speed="1.5">
+                  <div class="casestudy_tagline_text">
+                    <div class="marquee_flex">
+                      <span class="text_style_1">Core team</span>
+                      <span class="text_style_2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="40"
+                          height="40"
+                          viewBox="0 0 40 40"
+                          fill="none">
+                          <path
+                            d="M12.8909 12.2169L7.27829 17.3468L2.12793 11.7334L12.8909 12.2169Z"
+                            fill="#161616" />
+                          <path
+                            d="M7.27829 17.3476L12.9122 12.1983L18.0617 17.8321C14.9256 20.679 10.1057 20.4624 7.27829 17.3476Z"
+                            fill="#161616" />
+                          <path
+                            d="M12.8925 12.2169L18.5264 7.06758L13.377 1.43359L12.8925 12.2169Z"
+                            fill="#161616" />
+                          <path
+                            d="M18.5245 7.06742L12.8906 12.2168L18.04 17.8507C21.1353 15.002 21.3528 10.1618 18.5245 7.06742Z"
+                            fill="#161616" />
+                          <path
+                            d="M28.1274 12.9015L22.978 7.26774L28.6119 2.1182L28.1274 12.9015Z"
+                            fill="#161616" />
+                          <path
+                            d="M22.9774 7.26872L28.1268 12.9025L22.4929 18.052C19.6655 14.9372 19.883 10.097 22.9774 7.26872Z"
+                            fill="#161616" />
+                          <path
+                            d="M28.1279 12.9014L33.2579 18.5139L38.8909 13.3849L28.1279 12.9014Z"
+                            fill="#161616" />
+                          <path
+                            d="M33.2575 18.5137L28.1081 12.8799L22.4741 18.0293C25.3423 21.1459 30.1622 21.3624 33.2575 18.5137Z"
+                            fill="#161616" />
+                          <path
+                            d="M12.2078 27.4327L7.07867 21.7998L1.44479 26.9492L12.2078 27.4327Z"
+                            fill="#161616" />
+                          <path
+                            d="M7.07893 21.7991L12.2284 27.4329L17.8624 22.2836C14.9932 19.1874 10.1733 18.9708 7.07893 21.7991Z"
+                            fill="#161616" />
+                          <path
+                            d="M12.2085 27.4316L17.3579 33.0656L11.725 38.1946L12.2085 27.4316Z"
+                            fill="#161616" />
+                          <path
+                            d="M17.3564 33.0666L12.207 27.4326L17.8409 22.2832C20.6683 25.398 20.4517 30.2178 17.3564 33.0666Z"
+                            fill="#161616" />
+                          <path
+                            d="M27.4434 28.1162L21.8095 33.2658L26.9599 38.8792L27.4434 28.1162Z"
+                            fill="#161616" />
+                          <path
+                            d="M21.8098 33.2659L27.4437 28.1164L22.2942 22.4826C19.199 25.3313 18.9824 30.1511 21.8098 33.2659Z"
+                            fill="#161616" />
+                          <path
+                            d="M27.4448 28.1171L33.0583 22.9669L38.2078 28.6007L27.4448 28.1171Z"
+                            fill="#161616" />
+                          <path
+                            d="M33.0567 22.9662L27.4228 28.1155L22.2733 22.4817C25.4085 19.6553 30.2284 19.8718 33.0567 22.9662Z"
+                            fill="#161616" />
+                        </svg>
+                      </span>
+                      <span class="text_style_1">Core team</span>
+                      <span class="text_style_2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="40"
+                          height="40"
+                          viewBox="0 0 40 40"
+                          fill="none">
+                          <path
+                            d="M12.8909 12.2169L7.27829 17.3468L2.12793 11.7334L12.8909 12.2169Z"
+                            fill="#161616" />
+                          <path
+                            d="M7.27829 17.3476L12.9122 12.1983L18.0617 17.8321C14.9256 20.679 10.1057 20.4624 7.27829 17.3476Z"
+                            fill="#161616" />
+                          <path
+                            d="M12.8925 12.2169L18.5264 7.06758L13.377 1.43359L12.8925 12.2169Z"
+                            fill="#161616" />
+                          <path
+                            d="M18.5245 7.06742L12.8906 12.2168L18.04 17.8507C21.1353 15.002 21.3528 10.1618 18.5245 7.06742Z"
+                            fill="#161616" />
+                          <path
+                            d="M28.1274 12.9015L22.978 7.26774L28.6119 2.1182L28.1274 12.9015Z"
+                            fill="#161616" />
+                          <path
+                            d="M22.9774 7.26872L28.1268 12.9025L22.4929 18.052C19.6655 14.9372 19.883 10.097 22.9774 7.26872Z"
+                            fill="#161616" />
+                          <path
+                            d="M28.1279 12.9014L33.2579 18.5139L38.8909 13.3849L28.1279 12.9014Z"
+                            fill="#161616" />
+                          <path
+                            d="M33.2575 18.5137L28.1081 12.8799L22.4741 18.0293C25.3423 21.1459 30.1622 21.3624 33.2575 18.5137Z"
+                            fill="#161616" />
+                          <path
+                            d="M12.2078 27.4327L7.07867 21.7998L1.44479 26.9492L12.2078 27.4327Z"
+                            fill="#161616" />
+                          <path
+                            d="M7.07893 21.7991L12.2284 27.4329L17.8624 22.2836C14.9932 19.1874 10.1733 18.9708 7.07893 21.7991Z"
+                            fill="#161616" />
+                          <path
+                            d="M12.2085 27.4316L17.3579 33.0656L11.725 38.1946L12.2085 27.4316Z"
+                            fill="#161616" />
+                          <path
+                            d="M17.3564 33.0666L12.207 27.4326L17.8409 22.2832C20.6683 25.398 20.4517 30.2178 17.3564 33.0666Z"
+                            fill="#161616" />
+                          <path
+                            d="M27.4434 28.1162L21.8095 33.2658L26.9599 38.8792L27.4434 28.1162Z"
+                            fill="#161616" />
+                          <path
+                            d="M21.8098 33.2659L27.4437 28.1164L22.2942 22.4826C19.199 25.3313 18.9824 30.1511 21.8098 33.2659Z"
+                            fill="#161616" />
+                          <path
+                            d="M27.4448 28.1171L33.0583 22.9669L38.2078 28.6007L27.4448 28.1171Z"
+                            fill="#161616" />
+                          <path
+                            d="M33.0567 22.9662L27.4228 28.1155L22.2733 22.4817C25.4085 19.6553 30.2284 19.8718 33.0567 22.9662Z"
+                            fill="#161616" />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div class="leadership">
                 <div class="leadership_design_elements">
                   <span id="leadership1">Leadership</span>
@@ -698,259 +888,6 @@
                 </div>
               </div>
               <div class="core_team">
-                <div class="band_design_element">
-                  <div
-                    id="tagline1"
-                    class="band_tagline band_1 marquee3k diagonal-marquee"
-                    data-speed="1.5">
-                    <div class="casestudy_tagline_text">
-                      <div class="marquee_flex">
-                        <span class="text_style_1">Core team</span>
-                        <span class="text_style_2">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="40"
-                            height="40"
-                            viewBox="0 0 40 40"
-                            fill="none">
-                            <path
-                              d="M12.8909 12.2169L7.27829 17.3468L2.12793 11.7334L12.8909 12.2169Z"
-                              fill="#161616" />
-                            <path
-                              d="M7.27829 17.3476L12.9122 12.1983L18.0617 17.8321C14.9256 20.679 10.1057 20.4624 7.27829 17.3476Z"
-                              fill="#161616" />
-                            <path
-                              d="M12.8925 12.2169L18.5264 7.06758L13.377 1.43359L12.8925 12.2169Z"
-                              fill="#161616" />
-                            <path
-                              d="M18.5245 7.06742L12.8906 12.2168L18.04 17.8507C21.1353 15.002 21.3528 10.1618 18.5245 7.06742Z"
-                              fill="#161616" />
-                            <path
-                              d="M28.1274 12.9015L22.978 7.26774L28.6119 2.1182L28.1274 12.9015Z"
-                              fill="#161616" />
-                            <path
-                              d="M22.9774 7.26872L28.1268 12.9025L22.4929 18.052C19.6655 14.9372 19.883 10.097 22.9774 7.26872Z"
-                              fill="#161616" />
-                            <path
-                              d="M28.1279 12.9014L33.2579 18.5139L38.8909 13.3849L28.1279 12.9014Z"
-                              fill="#161616" />
-                            <path
-                              d="M33.2575 18.5137L28.1081 12.8799L22.4741 18.0293C25.3423 21.1459 30.1622 21.3624 33.2575 18.5137Z"
-                              fill="#161616" />
-                            <path
-                              d="M12.2078 27.4327L7.07867 21.7998L1.44479 26.9492L12.2078 27.4327Z"
-                              fill="#161616" />
-                            <path
-                              d="M7.07893 21.7991L12.2284 27.4329L17.8624 22.2836C14.9932 19.1874 10.1733 18.9708 7.07893 21.7991Z"
-                              fill="#161616" />
-                            <path
-                              d="M12.2085 27.4316L17.3579 33.0656L11.725 38.1946L12.2085 27.4316Z"
-                              fill="#161616" />
-                            <path
-                              d="M17.3564 33.0666L12.207 27.4326L17.8409 22.2832C20.6683 25.398 20.4517 30.2178 17.3564 33.0666Z"
-                              fill="#161616" />
-                            <path
-                              d="M27.4434 28.1162L21.8095 33.2658L26.9599 38.8792L27.4434 28.1162Z"
-                              fill="#161616" />
-                            <path
-                              d="M21.8098 33.2659L27.4437 28.1164L22.2942 22.4826C19.199 25.3313 18.9824 30.1511 21.8098 33.2659Z"
-                              fill="#161616" />
-                            <path
-                              d="M27.4448 28.1171L33.0583 22.9669L38.2078 28.6007L27.4448 28.1171Z"
-                              fill="#161616" />
-                            <path
-                              d="M33.0567 22.9662L27.4228 28.1155L22.2733 22.4817C25.4085 19.6553 30.2284 19.8718 33.0567 22.9662Z"
-                              fill="#161616" />
-                          </svg>
-                        </span>
-                        <span class="text_style_1">Core team</span>
-                        <span class="text_style_2">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="40"
-                            height="40"
-                            viewBox="0 0 40 40"
-                            fill="none">
-                            <path
-                              d="M12.8909 12.2169L7.27829 17.3468L2.12793 11.7334L12.8909 12.2169Z"
-                              fill="#161616" />
-                            <path
-                              d="M7.27829 17.3476L12.9122 12.1983L18.0617 17.8321C14.9256 20.679 10.1057 20.4624 7.27829 17.3476Z"
-                              fill="#161616" />
-                            <path
-                              d="M12.8925 12.2169L18.5264 7.06758L13.377 1.43359L12.8925 12.2169Z"
-                              fill="#161616" />
-                            <path
-                              d="M18.5245 7.06742L12.8906 12.2168L18.04 17.8507C21.1353 15.002 21.3528 10.1618 18.5245 7.06742Z"
-                              fill="#161616" />
-                            <path
-                              d="M28.1274 12.9015L22.978 7.26774L28.6119 2.1182L28.1274 12.9015Z"
-                              fill="#161616" />
-                            <path
-                              d="M22.9774 7.26872L28.1268 12.9025L22.4929 18.052C19.6655 14.9372 19.883 10.097 22.9774 7.26872Z"
-                              fill="#161616" />
-                            <path
-                              d="M28.1279 12.9014L33.2579 18.5139L38.8909 13.3849L28.1279 12.9014Z"
-                              fill="#161616" />
-                            <path
-                              d="M33.2575 18.5137L28.1081 12.8799L22.4741 18.0293C25.3423 21.1459 30.1622 21.3624 33.2575 18.5137Z"
-                              fill="#161616" />
-                            <path
-                              d="M12.2078 27.4327L7.07867 21.7998L1.44479 26.9492L12.2078 27.4327Z"
-                              fill="#161616" />
-                            <path
-                              d="M7.07893 21.7991L12.2284 27.4329L17.8624 22.2836C14.9932 19.1874 10.1733 18.9708 7.07893 21.7991Z"
-                              fill="#161616" />
-                            <path
-                              d="M12.2085 27.4316L17.3579 33.0656L11.725 38.1946L12.2085 27.4316Z"
-                              fill="#161616" />
-                            <path
-                              d="M17.3564 33.0666L12.207 27.4326L17.8409 22.2832C20.6683 25.398 20.4517 30.2178 17.3564 33.0666Z"
-                              fill="#161616" />
-                            <path
-                              d="M27.4434 28.1162L21.8095 33.2658L26.9599 38.8792L27.4434 28.1162Z"
-                              fill="#161616" />
-                            <path
-                              d="M21.8098 33.2659L27.4437 28.1164L22.2942 22.4826C19.199 25.3313 18.9824 30.1511 21.8098 33.2659Z"
-                              fill="#161616" />
-                            <path
-                              d="M27.4448 28.1171L33.0583 22.9669L38.2078 28.6007L27.4448 28.1171Z"
-                              fill="#161616" />
-                            <path
-                              d="M33.0567 22.9662L27.4228 28.1155L22.2733 22.4817C25.4085 19.6553 30.2284 19.8718 33.0567 22.9662Z"
-                              fill="#161616" />
-                          </svg>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    id="tagline2"
-                    class="band_tagline band_2 marquee3k reverse-diagonal-marquee"
-                    data-speed="1.5">
-                    <div class="casestudy_tagline_text">
-                      <div class="marquee_flex">
-                        <span class="text_style_1">Core team</span>
-                        <span class="text_style_2">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="40"
-                            height="40"
-                            viewBox="0 0 40 40"
-                            fill="none">
-                            <path
-                              d="M12.8909 12.2169L7.27829 17.3468L2.12793 11.7334L12.8909 12.2169Z"
-                              fill="#161616" />
-                            <path
-                              d="M7.27829 17.3476L12.9122 12.1983L18.0617 17.8321C14.9256 20.679 10.1057 20.4624 7.27829 17.3476Z"
-                              fill="#161616" />
-                            <path
-                              d="M12.8925 12.2169L18.5264 7.06758L13.377 1.43359L12.8925 12.2169Z"
-                              fill="#161616" />
-                            <path
-                              d="M18.5245 7.06742L12.8906 12.2168L18.04 17.8507C21.1353 15.002 21.3528 10.1618 18.5245 7.06742Z"
-                              fill="#161616" />
-                            <path
-                              d="M28.1274 12.9015L22.978 7.26774L28.6119 2.1182L28.1274 12.9015Z"
-                              fill="#161616" />
-                            <path
-                              d="M22.9774 7.26872L28.1268 12.9025L22.4929 18.052C19.6655 14.9372 19.883 10.097 22.9774 7.26872Z"
-                              fill="#161616" />
-                            <path
-                              d="M28.1279 12.9014L33.2579 18.5139L38.8909 13.3849L28.1279 12.9014Z"
-                              fill="#161616" />
-                            <path
-                              d="M33.2575 18.5137L28.1081 12.8799L22.4741 18.0293C25.3423 21.1459 30.1622 21.3624 33.2575 18.5137Z"
-                              fill="#161616" />
-                            <path
-                              d="M12.2078 27.4327L7.07867 21.7998L1.44479 26.9492L12.2078 27.4327Z"
-                              fill="#161616" />
-                            <path
-                              d="M7.07893 21.7991L12.2284 27.4329L17.8624 22.2836C14.9932 19.1874 10.1733 18.9708 7.07893 21.7991Z"
-                              fill="#161616" />
-                            <path
-                              d="M12.2085 27.4316L17.3579 33.0656L11.725 38.1946L12.2085 27.4316Z"
-                              fill="#161616" />
-                            <path
-                              d="M17.3564 33.0666L12.207 27.4326L17.8409 22.2832C20.6683 25.398 20.4517 30.2178 17.3564 33.0666Z"
-                              fill="#161616" />
-                            <path
-                              d="M27.4434 28.1162L21.8095 33.2658L26.9599 38.8792L27.4434 28.1162Z"
-                              fill="#161616" />
-                            <path
-                              d="M21.8098 33.2659L27.4437 28.1164L22.2942 22.4826C19.199 25.3313 18.9824 30.1511 21.8098 33.2659Z"
-                              fill="#161616" />
-                            <path
-                              d="M27.4448 28.1171L33.0583 22.9669L38.2078 28.6007L27.4448 28.1171Z"
-                              fill="#161616" />
-                            <path
-                              d="M33.0567 22.9662L27.4228 28.1155L22.2733 22.4817C25.4085 19.6553 30.2284 19.8718 33.0567 22.9662Z"
-                              fill="#161616" />
-                          </svg>
-                        </span>
-                        <span class="text_style_1">Core team</span>
-                        <span class="text_style_2">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="40"
-                            height="40"
-                            viewBox="0 0 40 40"
-                            fill="none">
-                            <path
-                              d="M12.8909 12.2169L7.27829 17.3468L2.12793 11.7334L12.8909 12.2169Z"
-                              fill="#161616" />
-                            <path
-                              d="M7.27829 17.3476L12.9122 12.1983L18.0617 17.8321C14.9256 20.679 10.1057 20.4624 7.27829 17.3476Z"
-                              fill="#161616" />
-                            <path
-                              d="M12.8925 12.2169L18.5264 7.06758L13.377 1.43359L12.8925 12.2169Z"
-                              fill="#161616" />
-                            <path
-                              d="M18.5245 7.06742L12.8906 12.2168L18.04 17.8507C21.1353 15.002 21.3528 10.1618 18.5245 7.06742Z"
-                              fill="#161616" />
-                            <path
-                              d="M28.1274 12.9015L22.978 7.26774L28.6119 2.1182L28.1274 12.9015Z"
-                              fill="#161616" />
-                            <path
-                              d="M22.9774 7.26872L28.1268 12.9025L22.4929 18.052C19.6655 14.9372 19.883 10.097 22.9774 7.26872Z"
-                              fill="#161616" />
-                            <path
-                              d="M28.1279 12.9014L33.2579 18.5139L38.8909 13.3849L28.1279 12.9014Z"
-                              fill="#161616" />
-                            <path
-                              d="M33.2575 18.5137L28.1081 12.8799L22.4741 18.0293C25.3423 21.1459 30.1622 21.3624 33.2575 18.5137Z"
-                              fill="#161616" />
-                            <path
-                              d="M12.2078 27.4327L7.07867 21.7998L1.44479 26.9492L12.2078 27.4327Z"
-                              fill="#161616" />
-                            <path
-                              d="M7.07893 21.7991L12.2284 27.4329L17.8624 22.2836C14.9932 19.1874 10.1733 18.9708 7.07893 21.7991Z"
-                              fill="#161616" />
-                            <path
-                              d="M12.2085 27.4316L17.3579 33.0656L11.725 38.1946L12.2085 27.4316Z"
-                              fill="#161616" />
-                            <path
-                              d="M17.3564 33.0666L12.207 27.4326L17.8409 22.2832C20.6683 25.398 20.4517 30.2178 17.3564 33.0666Z"
-                              fill="#161616" />
-                            <path
-                              d="M27.4434 28.1162L21.8095 33.2658L26.9599 38.8792L27.4434 28.1162Z"
-                              fill="#161616" />
-                            <path
-                              d="M21.8098 33.2659L27.4437 28.1164L22.2942 22.4826C19.199 25.3313 18.9824 30.1511 21.8098 33.2659Z"
-                              fill="#161616" />
-                            <path
-                              d="M27.4448 28.1171L33.0583 22.9669L38.2078 28.6007L27.4448 28.1171Z"
-                              fill="#161616" />
-                            <path
-                              d="M33.0567 22.9662L27.4228 28.1155L22.2733 22.4817C25.4085 19.6553 30.2284 19.8718 33.0567 22.9662Z"
-                              fill="#161616" />
-                          </svg>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
                 <div class="core_member_details">
                   <div
                     class="team_banner"
@@ -1014,14 +951,6 @@
                       </div>
                     </div>
 
-                    <!-- Kavesh Makhija -->
-                    <div class="core_member">
-                      <div>
-                        <div class="core_member_name">Kavesh Makhija</div>
-                        <div class="core_member_position">(Sr. UI Designer)</div>
-                      </div>
-                    </div>
-
                     <!-- Ananya Kadamb -->
                     <div class="core_member">
                       <div>
@@ -1061,7 +990,6 @@
                         <div class="core_member_position">(QA Engineer)</div>
                       </div>
                     </div>
-
                   </div>
                 </div>
               </div>
