@@ -475,6 +475,18 @@ body.curaxcura .casestudy_header_logo img {
     margin-right: 8%;
   }
 
+  .casestudy_tagline_section .heading.heading-hydro .line1 {
+    margin-right: 32%;
+  }
+
+  .casestudy_tagline_section .heading.heading-hydro .line2 {
+    margin-left: -7%;
+  }
+
+  .casestudy_tagline_section .heading.heading-hydro .line3 {
+    margin-right: 10%;
+  }
+
   .casestudy_tagline_section .heading.heading-upbeat img {
     width: 144px;
     height: 144px;
@@ -571,14 +583,14 @@ body.curaxcura .casestudy_header_logo img {
 } */
 
 .casestudy_info_heading {
-  font-size: 26px;
+  font-size: 34px;
   font-weight: 700;
   text-transform: lowercase;
-  line-height: 30px;
+  line-height: 36px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  max-width: 175px;
+  max-width: 240px;
 }
 
 .casestudy_info_heading span {
@@ -586,7 +598,7 @@ body.curaxcura .casestudy_header_logo img {
   font-style: italic;
   font-weight: 400;
   margin-left: auto;
-  font-size: 32px;
+  font-size: 40px;
   margin-top: 4px;
 }
 

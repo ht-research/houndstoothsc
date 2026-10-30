@@ -1,0 +1,25 @@
+{
+  "name": "houndstooth-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Houndstooth static site \u2014 hand-authored multi-page HTML/CSS/JS with a build pipeline for WebP conversion, minification and hot reload.",
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/dev.mjs",
+    "dev": "node scripts/dev.mjs",
+    "build": "node scripts/build.mjs",
+    "build:img": "node scripts/images-to-webp.mjs",
+    "build:css": "node scripts/minify-css.mjs",
+    "build:js": "node scripts/minify-js.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.2",
+    "chokidar": "^3.6.0",
+    "lightningcss": "^1.33.0",
+    "sharp": "^0.35.4",
+    "terser": "^5.31.1"
+  }
+}

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Image placeholder">
+  <defs>
+    <pattern id="ph-stripes" width="28" height="28" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="28" height="28" fill="#eceae4"/>
+      <rect width="14" height="28" fill="#e2dfd7"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#ph-stripes)"/>
+  <rect x="8" y="8" width="784" height="584" fill="none" stroke="#9c988c" stroke-width="3" stroke-dasharray="14 10"/>
+  <g fill="none" stroke="#8a867a" stroke-width="10" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="296" y="222" width="208" height="156" rx="12"/>
+    <path d="M296 336l58-50 44 38 40-34 66 56"/>
+  </g>
+  <circle cx="358" cy="264" r="15" fill="#8a867a"/>
+  <text x="400" y="428" text-anchor="middle" fill="#7d7970"
+    font-family="'Geist Mono', ui-monospace, SFMono-Regular, Menlo, monospace"
+    font-size="26" letter-spacing="4">IMAGE PLACEHOLDER</text>
+</svg>
