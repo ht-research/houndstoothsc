@@ -678,6 +678,12 @@
   overflow: hidden;
 }
 
+.about_values_section .guild_values .what_we_believe .gif_video img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .about_values_section .guild_values .ht_values {
   border: 4.776px solid var(--greyscale-k, #000);
   background: #fff;
