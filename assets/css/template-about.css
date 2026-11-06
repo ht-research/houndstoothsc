@@ -1277,6 +1277,7 @@
     width: 70%;
     margin-top: 6px;
     border-left: 1px solid black;
+    margin-left: auto;
   }
 
   .about_team_section .team_members .core_team .core_member {
