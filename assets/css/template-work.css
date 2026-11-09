@@ -49,7 +49,7 @@ body {
   position: relative;
   overflow: hidden;
   margin-bottom: 20px;
-  transition: 0.7s cubic-bezier(0.47, 0, 0.745, 0.715);
+  /* no transition: transform/opacity are driven per-frame from scrollY */
 }
 
 .work_header_section .heading span.span_2 {
@@ -63,7 +63,7 @@ body {
   display: block;
   position: relative;
   overflow: hidden;
-  transition: 0.7s cubic-bezier(0.47, 0, 0.745, 0.715);
+  /* no transition: transform/opacity are driven per-frame from scrollY */
 }
 
 .work_header_section .heading span.span_1::before,
@@ -137,7 +137,20 @@ body {
   object-fit: cover;
   height: 100%;
   width: 100%;
-  transition: 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
+  /* transform only: the shorthand also transitioned width/height/object-fit.
+     0.3s was too short for a 20% zoom, and the old curve was an ease-in, so
+     the zoom crept at the start and lurched at the end. Ease out over 0.6s
+     instead, so it moves away quickly and settles gently. */
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Promote only where a hover zoom can actually happen, so the first frame
+   does not stall rasterising the scaled-up image. Touch devices are excluded
+   so they carry no extra compositor layers. */
+@media (hover: hover) {
+  .our_work_card_image img {
+    will-change: transform;
+  }
 }
 
 .our_work_card:hover img {

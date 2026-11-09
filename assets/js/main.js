@@ -1,10 +1,18 @@
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-const smoother = ScrollSmoother.create({
-  smooth: 1.25,
-  smoothTouch: 0,
-  normalizeScroll: true,
-});
+// Smooth scrolling is disabled site-wide. ScrollSmoother with normalizeScroll
+// drives scrolling from the JS main thread, so any main-thread stall freezes the
+// page mid-gesture and then lurches. Every page now uses the browser's own
+// native scrolling. Flip this flag to true to bring smooth scrolling back.
+const ENABLE_SMOOTH_SCROLL = false;
+
+const smoother = ENABLE_SMOOTH_SCROLL
+  ? ScrollSmoother.create({
+      smooth: 1.25,
+      smoothTouch: 0,
+      normalizeScroll: true,
+    })
+  : null;
 
 document.addEventListener('DOMContentLoaded', function () {
   // marquee init
@@ -81,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
             trigger: scaleImage,
             start: 'top 80%',
             end: 'bottom center',
-            scrub: true,
+            scrub: 1,
           },
         },
       );

@@ -1,4 +1,17 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener('DOMContentLoaded', function () {
+  // services blob parallax - same treatment as the homepage
+  // focused_section_row images
+  gsap.to('.services_blob', {
+    yPercent: -40,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '.about_services_section',
+      start: 'top bottom',
+      end: 'bottom top',
+      scrub: 1,
+    },
+  });
+
   // marquee text animation
   const marqueeElements = document.querySelectorAll('.marquee-text');
   let marqueeStart = 0;
@@ -26,8 +39,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //Type Effect
   // array with texts to type in typewriter
-  var dataText = ["Thinkers &"];
-  var dataText2 = ["Builders"];
+  var dataText = ['Thinkers &'];
+  var dataText2 = ['Builders'];
 
   // type one text in the typwriter
   // keeps calling itself until the text is finished
@@ -35,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // chekc if text isn't finished yet
     if (i < text.length) {
       // add next character to h1
-      document.querySelector("h1").innerHTML =
+      document.querySelector('h1').innerHTML =
         text.substring(0, i + 1) + '<span aria-hidden="true"></span>';
 
       // wait for a while and call this function again for next character
@@ -44,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }, 90);
     }
     // text finished, call callback if there is a callback function
-    else if (typeof fnCallback == "function") {
+    else if (typeof fnCallback == 'function') {
       // call callback after timeout
       setTimeout(fnCallback, 700);
     }
@@ -55,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // chekc if text isn't finished yet
     if (i < text.length) {
       // add next character to h1
-      document.querySelector("h2").innerHTML =
+      document.querySelector('h1.heading2').innerHTML =
         '<span aria-hidden="true"></span>' + text.substring(i, text.length);
 
       // wait for a while and call this function again for next character
@@ -64,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }, 100);
     }
     // text finished, call callback if there is a callback function
-    else if (typeof fnCallback == "function") {
+    else if (typeof fnCallback == 'function') {
       // call callback after timeout
       setTimeout(fnCallback, 700);
     }
@@ -72,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // start a typewriter animation for a text in the dataText array
   function StartTextAnimation(i) {
-    if (typeof dataText[i] == "undefined") {
+    if (typeof dataText[i] == 'undefined') {
       setTimeout(function () {
         StartTextAnimation(0);
       }, 20000);
@@ -88,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   // start a typewriter animation for a text in the dataText array
   function StartTextAnimation2(i) {
-    if (typeof dataText2[i] == "undefined") {
+    if (typeof dataText2[i] == 'undefined') {
       setTimeout(function () {
         StartTextAnimation2(0);
       }, 20000);
@@ -111,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Award Animation
   // Get all elements with the class 'menu__link'
-  const elements = document.querySelectorAll(".award_title");
+  const elements = document.querySelectorAll('.award_title');
 
   // Loop through each element
   elements.forEach((el) => {
@@ -124,22 +137,22 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     // Create 'text' and 'line' elements
-    const text = document.createElement("span");
-    text.classList.add("menu__link-inner");
+    const text = document.createElement('span');
+    text.classList.add('menu__link-inner');
     text.innerHTML = el.innerHTML;
-    el.innerHTML = "";
+    el.innerHTML = '';
     el.appendChild(text);
 
-    const line = document.createElement("span");
-    line.classList.add("menu__link-deco");
+    const line = document.createElement('span');
+    line.classList.add('menu__link-deco');
     el.appendChild(line);
 
     // Set animation options based on data attributes
     if (el.dataset.text !== undefined) {
-      options.animation.text = el.dataset.text === "false" ? false : true;
+      options.animation.text = el.dataset.text === 'false' ? false : true;
     }
     if (el.dataset.line !== undefined) {
-      options.animation.line = el.dataset.line === "false" ? false : true;
+      options.animation.line = el.dataset.line === 'false' ? false : true;
     }
 
     // Initialize event listeners
@@ -148,8 +161,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const onMouseEnterFn = () => tl.restart();
     const onMouseLeaveFn = () => tl.progress(1).kill();
 
-    el.addEventListener("mouseenter", onMouseEnterFn);
-    el.addEventListener("mouseleave", onMouseLeaveFn);
+    el.addEventListener('mouseenter', onMouseEnterFn);
+    el.addEventListener('mouseleave', onMouseLeaveFn);
 
     // Create timeline
     function createTimeline() {
@@ -165,25 +178,25 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         onComplete: () => {
           if (options.animation.line) {
-            line.style.filter = "none";
+            line.style.filter = 'none';
           }
           if (options.animation.text) {
-            text.style.filter = "none";
+            text.style.filter = 'none';
           }
         },
       });
     }
 
     // Define filterId and other properties specific to LinkFx2
-    const filterId = "#filter-2";
+    const filterId = '#filter-2';
     const feTurbulence = document.querySelector(`${filterId} > feTurbulence`);
     const primitiveValues = { turbulence: 0 };
 
     createTimeline();
 
     // Update turbulence attribute during timeline update
-    tl.eventCallback("onUpdate", () => {
-      feTurbulence.setAttribute("baseFrequency", primitiveValues.turbulence);
+    tl.eventCallback('onUpdate', () => {
+      feTurbulence.setAttribute('baseFrequency', primitiveValues.turbulence);
     });
 
     // Add animation to turbulence
@@ -198,12 +211,12 @@ document.addEventListener("DOMContentLoaded", function () {
   let previousScrollPosition = window.scrollY;
 
   // Listen for the scroll event
-  window.addEventListener("scroll", () => {
+  window.addEventListener('scroll', () => {
     const currentScrollPosition = window.scrollY;
 
-    const leadership1 = document.querySelector("#leadership1");
-    const leadership2 = document.querySelector("#leadership2");
-    const teamScroll = document.querySelector("#teamScroll");
+    const leadership1 = document.querySelector('#leadership1');
+    const leadership2 = document.querySelector('#leadership2');
+    const teamScroll = document.querySelector('#teamScroll');
 
     let scrollDiff = 400;
 
@@ -212,12 +225,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     let rate = currentScrollPosition * 1.2 - currentScrollPosition - scrollDiff;
 
-    leadership1.style.transform =
-      "translate3d( 0, " + rate + "px , 0 ) rotate(-90deg)";
-    leadership2.style.transform =
-      "translate3d( 0, " + -rate + "px , 0 ) rotate(90deg)";
+    leadership1.style.transform = 'translate3d( 0, ' + rate + 'px , 0 ) rotate(-90deg)';
+    leadership2.style.transform = 'translate3d( 0, ' + -rate + 'px , 0 ) rotate(90deg)';
     if (window.innerWidth > 992) {
-      teamScroll.style.transform = "translate3d( 0, " + -rate + "px , 0 )";
+      teamScroll.style.transform = 'translate3d( 0, ' + -rate + 'px , 0 )';
     }
 
     // Update the previous scroll position

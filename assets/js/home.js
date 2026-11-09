@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     ease: 'power1.inOut',
     scrollTrigger: {
       trigger: '.intro_hero',
-      scrub: true,
+      scrub: 1,
       start: 'top top',
     },
   });
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
       trigger: '.focused_section_row',
       start: 'top bottom',
       end: 'bottom top',
-      scrub: true,
+      scrub: 1,
     },
   });
 
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
       trigger: '.focused_section_row',
       start: 'top bottom',
       end: 'bottom top',
-      scrub: true,
+      scrub: 1,
     },
   });
 
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
       trigger: '.focused_section_row',
       start: 'top bottom',
       end: 'bottom top',
-      scrub: true,
+      scrub: 1,
     },
   });
 

@@ -1,0 +1,1498 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1" />
+    <meta
+      name="robots"
+      content="index, follow" />
+    <meta
+      property="og:image"
+      content="../assets/images/thumbnail_web.jpg" />
+    <meta
+      name="description"
+      content="" />
+
+    <title>Houndstooth | hydRo 365 Case Study</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-FJFZ208Z73"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-FJFZ208Z73');
+    </script>
+
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/images/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/images/favicon-32x32.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/images/favicon-16x16.png" />
+
+    <!-- Fonts -->
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" />
+
+    <link
+      href="../assets/css/fonts.css"
+      rel="preload"
+      as="style"
+      onload="this.rel = 'stylesheet'" />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="../assets/css/fonts.css"
+    /></noscript>
+
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="../assets/css/main.min.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/css/template-casestudy.min.css" />
+    <link
+      href="../assets/css/flickity.min.css"
+      rel="preload"
+      as="style"
+      onload="this.rel = 'stylesheet'" />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="../assets/css/flickity.min.css"
+    /></noscript>
+
+    <style>
+      /* ── hydRo 365 page tokens ── */
+      .hydro365 {
+        --hy-blue: #233bf8;
+        --hy-red: #ff2e00;
+        --hy-pale: #e2f0ff;
+        --hy-ink: #010101;
+        --hy-mono: var(--geist-mono-font, 'Geist Mono', monospace);
+      }
+
+      /* image placeholders — swap the inner div for an <img> when assets land */
+      .hy_ph {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        min-height: 140px;
+        padding: 16px;
+        text-align: center;
+        border: 1.5px dashed rgba(0, 0, 0, 0.55);
+        background: repeating-linear-gradient(
+          135deg,
+          #f4f4f2 0px,
+          #f4f4f2 12px,
+          #e8e8e4 12px,
+          #e8e8e4 24px
+        );
+      }
+
+      .hy_ph_label {
+        font-family: var(--hy-mono);
+        font-size: 10px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: rgba(0, 0, 0, 0.6);
+      }
+
+      .hy_ph_on_dark {
+        border-color: rgba(255, 255, 255, 0.6);
+        background: repeating-linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.16) 0px,
+          rgba(255, 255, 255, 0.16) 12px,
+          rgba(255, 255, 255, 0.05) 12px,
+          rgba(255, 255, 255, 0.05) 24px
+        );
+      }
+
+      .hy_ph_on_dark .hy_ph_label {
+        color: rgba(255, 255, 255, 0.85);
+      }
+
+      /* photography fills the ratio boxes it is dropped into */
+      .casestudy_header_image img,
+      .hy_quote_media img,
+      .hy_ft_screens_grid img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* ── hero logo lockup ── */
+      .hy_hero_logo {
+        font-family: var(--primary-font);
+        font-weight: 500;
+        font-size: clamp(56px, 15vw, 250px);
+        color: var(--hy-blue);
+        line-height: 0.82;
+        letter-spacing: -0.04em;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+      }
+
+      .hy_hero_logo b {
+        font-weight: 800;
+      }
+
+      .hy_hero_logo sup {
+        font-size: 0.32em;
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: -0.02em;
+        vertical-align: super;
+      }
+
+      /* ── quote over two photos ── */
+      .hy_quote_section {
+        position: relative;
+        margin-bottom: 32px;
+      }
+
+      .hy_quote_media {
+        aspect-ratio: 16 / 11;
+      }
+
+      /* ── type + palette ──
+         A single grid so mobile can interleave the two type cards with pairs of
+         swatches (headline, 2 swatches, body, 2 swatches) while desktop puts both
+         cards on one row and all four swatches on the next. */
+      .hy_palette {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        padding: 0 12px;
+        margin-top: -90px;
+        margin-bottom: 40px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .hy_type_card {
+        grid-column: span 2;
+        border-radius: 10px;
+        padding: 14px 16px 22px;
+        min-height: 98px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .hy_type_card_headline {
+        background-color: var(--hy-red);
+        color: #fff;
+      }
+
+      .hy_type_card_body {
+        background-color: var(--hy-pale);
+        color: var(--hy-blue);
+      }
+
+      /* HT_1: small caps, not all-caps - so the source keeps its natural casing */
+      .hy_type_label {
+        font-family: var(--primary-font);
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        opacity: 0.85;
+      }
+
+      .hy_type_name {
+        font-family: var(--primary-font);
+        font-size: 29px;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+      }
+
+      .hy_color_swatch {
+        width: 100%;
+        aspect-ratio: 16 / 10;
+        border-radius: 8px;
+        display: flex;
+        align-items: flex-end;
+        padding: 10px 12px;
+      }
+
+      .hy_color_hex {
+        font-family: var(--hy-mono);
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #fff;
+        white-space: nowrap;
+      }
+
+      /* the pale swatch needs dark ink to stay legible */
+      .hy_color_swatch_light .hy_color_hex {
+        color: var(--hy-blue);
+      }
+
+      /* ── flat colour panels that hold screens ── */
+      .hy_panel {
+        padding: 24px 16px;
+      }
+
+      /* Textured panel backgrounds. The flat colour stays underneath as a
+         fallback while the image loads (or if it fails), and the mobile crops
+         are used by default - the desktop files are only fetched once the
+         min-width query below matches. */
+      .hy_panel_blue {
+        background-color: var(--hy-blue);
+        background-image: url('../assets/images/hydro365/webp/hydro-panel-bg-blue-mob.webp');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .hy_panel_red {
+        background-color: var(--hy-red);
+        background-image: url('../assets/images/hydro365/webp/hydro-panel-bg-red-mob.webp');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .hy_ft_screens_grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        max-width: 1440px;
+        margin: 0 auto;
+      }
+
+      .hy_ft_screens_grid > * {
+        aspect-ratio: 3 / 4;
+      }
+
+      .hy_ft_screens_grid .hy_span_2 {
+        grid-column: span 2;
+        aspect-ratio: 16 / 9;
+      }
+
+      /* ── website + app showcase ──
+         Mobile stacks all three shots; desktop puts the long website capture in
+         a tall left column with the two phone screens stacked beside it. */
+      .hy_showcase {
+        max-width: 1440px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 28px;
+        justify-items: center;
+      }
+
+      .hy_showcase figure {
+        width: 100%;
+      }
+
+      .hy_showcase img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* ratios reserve the right space so nothing shifts when the real
+         screenshots replace the placeholders */
+      .hy_showcase_desktop {
+        aspect-ratio: 655 / 1053;
+      }
+
+      .hy_showcase_desktop {
+        margin: 0;
+      }
+
+      .hy_showcase_phone {
+        width: 72%;
+        max-width: 232px;
+        aspect-ratio: 232 / 530;
+        margin: 0 18px;
+      }
+
+      .hy_showcase_phone_home {
+        margin-right: auto;
+      }
+
+      .hy_showcase_phone_faq {
+        margin-left: auto;
+      }
+
+      /* ── promo band: phone + logo + cta ── */
+      /* the logo ships as dark artwork on transparency; brightness(0) flattens
+         it to solid black and invert(1) turns that white for the red band */
+      /* ── field shot + ticker ──
+         One section owns the blue field: the media sits in its own padded box
+         so the ticker stays flush against the bottom edge. It deliberately does
+         not carry .hy_panel - that class re-declares `padding` at a later
+         breakpoint, and this band needs zero side padding so the image
+         percentage and the full-bleed ticker measure off the band itself. */
+      .hy_panel_field {
+        background-color: var(--hy-blue);
+        padding-bottom: 60px;
+      }
+
+      .hy_field_media {
+        padding: 36px 12px 0;
+      }
+
+      .hy_field_img {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+      }
+
+      .hy_field_img_desktop {
+        display: none;
+      }
+
+      /* marquee3k wraps and clones the track; these styles only dress it */
+      .hy_ticker {
+        background-color: var(--hy-red);
+        overflow: hidden;
+        padding: 6px 0;
+        margin-top: 40px;
+      }
+
+      /* marquee3k writes `display: inline-block` onto this element as an inline
+         style, which beats any display we set here - so spacing uses margins
+         rather than flex gap, and the dots must be inline-block to take a size */
+      .hy_ticker_text {
+        white-space: nowrap;
+      }
+
+      .hy_ticker_item {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 30px;
+        font-family: var(--primary-font);
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 20%;
+        text-transform: uppercase;
+        color: #fff;
+        white-space: nowrap;
+      }
+
+      .hy_ticker_dot {
+        display: inline-block;
+        vertical-align: middle;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: var(--hy-blue);
+      }
+
+      /* the promo band ships as one image per breakpoint */
+      .hy_promo_img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .hy_promo_img_desktop {
+        display: none;
+      }
+
+      /* ── product facts ──
+         One bordered white card: heading + metrics on the left, the three
+         preparation steps and the nutrition link on the right. The steps stay
+         a three-up row at every width, as in the design. */
+
+      /* the whole facts block ships as one image per breakpoint */
+      .hy_facts_img {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+      }
+
+      .hy_facts_img_desktop {
+        display: none;
+      }
+
+      .hy_facts_panel {
+        margin-top: -40px;
+        margin-bottom: -40px;
+        position: relative;
+        z-index: 1;
+      }
+
+      /* the index sits at the top of the row, not on the title's baseline */
+      /* ── everyone collage ──
+         Three flat screenshots composed on a pale blue field. Mobile stacks them
+         with a slight overlap; desktop positions them by percentage inside a
+         fixed-ratio stage so the arrangement matches the comp at any width. */
+      .hy_everyone_panel {
+        background-color: var(--hy-pale);
+        background-image: url('../assets/images/hydro365/webp/hydro-panel-bg-sky-mob.webp');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding-top: 80px;
+        padding-bottom: 100px;
+      }
+
+      .hy_everyone {
+        max-width: 1440px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* contain, not cover: these are flat screenshots and must not be cropped */
+      .hy_everyone img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      /* Each slot carries its file's true ratio so it reserves space before the
+         lazy image loads. Margins live on these rules rather than a shared
+         `.hy_everyone figure` reset, which would out-specify them and flatten
+         the overlap. */
+      .hy_everyone_card {
+        width: 80%;
+        aspect-ratio: 585 / 564;
+        align-self: flex-start;
+        margin: 0;
+        z-index: 1;
+      }
+
+      .hy_everyone_laptop {
+        width: 83%;
+        aspect-ratio: 705 / 939;
+        align-self: flex-end;
+        margin: -8.7% 0 0;
+      }
+
+      .hy_everyone_phone {
+        width: 67%;
+        aspect-ratio: 405 / 971;
+        align-self: flex-start;
+        margin: 6.4% 0 0;
+      }
+
+      /* ── footer design shots on a photo backdrop ── */
+      .hy_panel_ft_screens {
+        position: relative;
+        overflow: hidden;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        margin-bottom: 40px;
+      }
+
+      .hy_ft_bg {
+        object-fit: cover;
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+      }
+
+      .hy_ft_shots {
+        position: relative;
+        z-index: 1;
+        max-width: 1440px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+      }
+
+      /* width lives on the per-shot classes below; setting it here too would
+         out-specify them (class+element beats a lone class) and flatten both
+         shots to the same size */
+      .hy_ft_shots img {
+        display: block;
+        height: auto;
+        flex-shrink: 0;
+      }
+
+      .hy_ft_shot_mobile {
+        width: 44%;
+        max-width: 210px;
+      }
+
+      .hy_ft_shot_desktop {
+        width: 96%;
+      }
+
+      /* ── custom iconography ──
+         A pre-rendered GIF per breakpoint. The desktop file is 1920x499 and the
+         mobile one 351x389, so each is dropped in at its own aspect ratio. */
+      .hy_icons {
+        background-color: var(--hy-blue);
+        padding: 0;
+        margin: -50px 12px 0;
+      }
+
+      .hy_icons_gif {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .hy_icons_gif_desktop {
+        display: none;
+      }
+
+      @media (min-width: 768px) {
+        .hy_type_label {
+          font-size: 24px;
+        }
+        .hy_facts_panel {
+          margin-top: -250px;
+          margin-bottom: -120px;
+        }
+
+        .hy_facts_img_desktop {
+          display: block;
+        }
+
+        .hy_facts_img_mobile {
+          display: none;
+        }
+
+        .hy_showcase {
+          grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+          gap: 40px;
+          align-items: start;
+          justify-items: stretch;
+        }
+
+        .hy_showcase_desktop {
+          grid-column: 1;
+          grid-row: 1 / span 2;
+        }
+
+        .hy_showcase_phone {
+          width: 100%;
+          max-width: 232px;
+        }
+
+        .hy_showcase_phone_home {
+          grid-column: 2;
+          grid-row: 1;
+        }
+
+        .hy_showcase_phone_faq {
+          grid-column: 2;
+          grid-row: 2;
+          justify-self: end;
+        }
+
+        .hy_promo_img_desktop {
+          display: block;
+        }
+
+        .hy_promo_img_mobile {
+          display: none;
+        }
+
+        .hy_everyone_panel {
+          padding-top: 120px !important;
+          padding-bottom: 150px !important;
+        }
+
+        .hy_field_media {
+          padding-top: 60px;
+        }
+      }
+
+      @media (min-width: 992px) {
+        .hy_ph {
+          min-height: 180px;
+        }
+
+        .hy_ph_label {
+          font-size: 11px;
+        }
+
+        .hy_quote_media {
+          aspect-ratio: 16 / 7.3;
+        }
+
+        .hy_palette {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 16px;
+          padding: 0 25px;
+          margin-bottom: 52px;
+        }
+
+        .hy_type_card {
+          min-height: 132px;
+          border-radius: 18px;
+          padding: 18px 22px 32px;
+        }
+
+        /* both cards share the first row, swatches fill the second */
+        .hy_type_card_headline {
+          grid-column: 1 / 3;
+          grid-row: 1;
+        }
+
+        .hy_type_card_body {
+          grid-column: 3 / 5;
+          grid-row: 1;
+        }
+
+        .hy_color_swatch {
+          padding: 20px;
+          border-radius: 18px;
+        }
+
+        .hy_palette .hy_color_swatch {
+          grid-row: 2;
+        }
+
+        /* HT_2 */
+        .hy_type_name {
+          font-size: 48px;
+          font-weight: 500;
+        }
+
+        /* HT_3 */
+        .hy_color_hex {
+          font-size: 20px;
+        }
+
+        .hy_panel {
+          padding: 40px;
+        }
+
+        .hy_panel_showcase {
+          padding: 60px 40px;
+        }
+
+        .hy_ft_screens_grid {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 20px;
+        }
+
+        /* image is 74% of the band in the comp; the 0 / 240px rhythm now lives
+           on the media box so the ticker can sit flush at the bottom */
+        .hy_panel_field {
+          padding: 0 0 260px;
+        }
+
+        .hy_panel_blue {
+          background-image: url('../assets/images/hydro365/webp/hydro-panel-bg-blue.webp');
+        }
+
+        .hy_panel_red {
+          background-image: url('../assets/images/hydro365/webp/hydro-panel-bg-red.webp');
+        }
+
+        .hy_everyone_panel {
+          background-image: url('../assets/images/hydro365/webp/hydro-panel-bg-sky.webp');
+        }
+
+        .hy_field_media {
+          padding-top: 100px;
+        }
+
+        .hy_field_img_desktop {
+          display: block;
+          width: 74%;
+        }
+
+        .hy_field_img_mobile {
+          display: none;
+        }
+
+        .hy_ticker {
+          margin-top: 70px;
+        }
+
+        .hy_ticker_item {
+          margin: 0 40px;
+        }
+
+        /* heading pinned top, metrics pinned bottom */
+        /* percentages below come straight from the comp (1096 x 790 frame) */
+        .hy_everyone {
+          position: relative;
+          display: block;
+          aspect-ratio: 1100 / 700;
+        }
+
+        .hy_everyone figure {
+          position: absolute;
+        }
+
+        .hy_everyone_card,
+        .hy_everyone_laptop,
+        .hy_everyone_phone {
+          margin: 0;
+        }
+
+        .hy_everyone_card {
+          left: 6%;
+          top: 6.6%;
+          width: 26.2%;
+        }
+
+        .hy_everyone_laptop {
+          left: 26.9%;
+          top: 33.5%;
+          width: 31.8%;
+        }
+
+        .hy_everyone_phone {
+          left: 69.1%;
+          top: 4.7%;
+          width: 18.2%;
+        }
+
+        /* The band is inset 120px each side and pulled up 70px over the section
+           above. .hy_panel re-declares `padding` at a later breakpoint, so this
+           needs two classes to keep winning. */
+        .hy_panel.hy_icons {
+          margin: -70px 120px 0;
+          padding: 0;
+        }
+
+        .hy_icons_gif_desktop {
+          display: block;
+        }
+
+        .hy_icons_gif_mobile {
+          display: none;
+        }
+
+        .hy_panel_ft_screens {
+          padding-top: 100px;
+          padding-bottom: 100px;
+          margin-bottom: 72px;
+        }
+
+        .hy_ft_shots {
+          flex-direction: row;
+          align-items: flex-start;
+          justify-content: center;
+          gap: 70px;
+        }
+
+        .hy_ft_shot_mobile {
+          width: 21%;
+          max-width: none;
+        }
+
+        .hy_ft_shot_desktop {
+          width: 73%;
+        }
+      }
+
+      @media (min-width: 1360px) {
+        .hy_panel_palette {
+          padding-left: 90px;
+          padding-right: 90px;
+        }
+
+        .hy_type_card {
+          min-height: 190px;
+        }
+
+        .hy_type_name {
+          font-size: 56px;
+        }
+
+        .hy_palette {
+          padding: 0;
+        }
+
+        .hy_panel {
+          padding: 60px 130px;
+        }
+
+        .hy_panel_showcase {
+          padding-top: 80px;
+          padding-bottom: 80px;
+        }
+
+        .hy_showcase {
+          gap: 60px;
+        }
+
+        .hy_panel_ft_screens {
+          padding-top: 170px;
+          padding-bottom: 170px;
+        }
+      }
+    </style>
+  </head>
+  <body class="hydro365 casestudy">
+    <!-- <div id="site-loader" class="site-loader"></div> -->
+
+    <div
+      id="site-page"
+      class="site">
+      <!-- Header -->
+      <header class="site_header site_header_casestudy">
+        <div class="site_header_wrapper">
+          <a
+            class="site_brand"
+            href="../"
+            aria-label="go to home">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="56"
+              viewBox="0 0 32 56"
+              fill="none">
+              <path
+                d="M0 0.0849609H9.02254V23.673H22.9775V10.6214C27.9588 10.6214 32 13.344 32 18.3254V55.7218H22.9775V32.4391H9.02254V45.1732C4.04123 45.1732 0 42.7192 0 37.7379V0.0849609Z"
+                fill="#000" />
+            </svg>
+          </a>
+          <button
+            class="site_menu_toggle menu_toggle_open"
+            type="button"
+            style="color: black">
+            (Menu)
+          </button>
+        </div>
+      </header>
+
+      <div
+        class="site_menu_modal"
+        style="display: none">
+        <nav class="site_navigation">
+          <button
+            class="site_menu_toggle menu_toggle_close"
+            type="button">
+            (Close)
+          </button>
+          <ul class="site_navbar">
+            <li>
+              <a href="../">
+                <div
+                  class="site_nav_content site_nav_content_1"
+                  data-hover="false">
+                  <span class="site_nav_text">Home</span>
+                  <span class="site_nav_index">
+                    (
+                    <span class="site_nav_index_digit">
+                      <span class="site_nav_index_digit_static">01</span>
+                      <span class="site_nav_index_digit_hover">01</span>
+                    </span>
+                    )
+                  </span>
+                  <span class="hover_line"></span>
+                  <img
+                    class="hover_img lozad"
+                    data-src="../assets/images/hover-animation-home.gif"
+                    width="270"
+                    height="284"
+                    alt="" />
+                </div>
+              </a>
+              <div class="site_nav_line"></div>
+            </li>
+            <li>
+              <a href="../houndstooth-design-work/">
+                <div class="site_nav_content">
+                  <span class="site_nav_text">Work</span>
+                  <span class="site_nav_index">
+                    (
+                    <span class="site_nav_index_digit">
+                      <span class="site_nav_index_digit_static">02</span>
+                      <span class="site_nav_index_digit_hover">02</span>
+                    </span>
+                    )
+                  </span>
+                  <span class="hover_line"></span>
+                  <img
+                    class="hover_img lozad"
+                    data-src="../assets/images/hover-animation-work.gif"
+                    width="270"
+                    height="284"
+                    alt="" />
+                </div>
+              </a>
+              <div class="site_nav_line"></div>
+            </li>
+            <li>
+              <a href="../houndstooth-about-us/">
+                <div class="site_nav_content">
+                  <span class="site_nav_text">About</span>
+                  <span class="site_nav_index">
+                    (
+                    <span class="site_nav_index_digit">
+                      <span class="site_nav_index_digit_static">03</span>
+                      <span class="site_nav_index_digit_hover">03</span>
+                    </span>
+                    )
+                  </span>
+                  <span class="hover_line"></span>
+                  <img
+                    class="hover_img lozad"
+                    data-src="../assets/images/hover-animation-about.gif"
+                    width="270"
+                    height="284"
+                    alt="" />
+                </div>
+              </a>
+              <div class="site_nav_line"></div>
+            </li>
+            <li>
+              <a href="mailto:contact@houndstoothsc.com">
+                <div class="site_nav_content">
+                  <span class="site_nav_text">Contact</span>
+                  <span class="site_nav_index">
+                    (
+                    <span class="site_nav_index_digit">
+                      <span class="site_nav_index_digit_static">04</span>
+                      <span class="site_nav_index_digit_hover">04</span>
+                    </span>
+                    )
+                  </span>
+                  <span class="hover_line"></span>
+                  <img
+                    class="hover_img lozad"
+                    data-src="../assets/images/hover-animation-contact.gif"
+                    width="270"
+                    height="284"
+                    alt="" />
+                </div>
+              </a>
+              <div class="site_nav_line"></div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Body -->
+      <div
+        class="smooth-scroll smoooth"
+        id="smooth-wrapper">
+        <div
+          class="smooth-scroll-inner smoooth-inner"
+          id="smooth-content">
+          <!-- Page Header Section -->
+          <section class="casestudy_header_section casestudy_header">
+            <div class="casestudy_header_image cs_anim_header">
+              <img
+                loading="lazy"
+                src="../assets/images/hydro365/webp/casestudy-hydro365.webp"
+                alt="Hero photo of a runner" />
+            </div>
+            <div class="casestudy_header_logo cs_anim_logo">
+              <img
+                class="lozad"
+                data-src="../assets/images/hydro365/webp/hydro-logo.webp"
+                fetchpriority="high"
+                alt=""
+                width="1346"
+                height="311" />
+            </div>
+          </section>
+
+          <!-- work -->
+          <section class="casestudy_tagline_section bright three_line_text">
+            <h1 class="heading heading-hydro cs_anim_heading">
+              <span class="line1">Just water</span>
+              <span class="line2">is not</span>
+              <span class="line3">enough</span>
+            </h1>
+          </section>
+
+          <div class="rest_of_the_section">
+            <!-- Founder quote over dual photos -->
+            <section class="hy_quote_section">
+              <div class="hy_quote_media">
+                <img
+                  loading="lazy"
+                  src="../assets/images/hydro365/webp/hydro_quote_media.webp"
+                  alt="Founder interview photo" />
+              </div>
+            </section>
+
+            <!-- Type & palette -->
+            <div class="hy_panel_palette">
+              <div class="hy_palette">
+                <div class="hy_type_card hy_type_card_headline">
+                  <span class="hy_type_label">Headline</span>
+                  <span class="hy_type_name">Nohemi</span>
+                </div>
+                <div
+                  class="hy_color_swatch"
+                  style="background-color: var(--hy-blue)">
+                  <span class="hy_color_hex">#233BF8</span>
+                </div>
+                <div
+                  class="hy_color_swatch"
+                  style="background-color: var(--hy-red)">
+                  <span class="hy_color_hex">#FF2E00</span>
+                </div>
+                <div class="hy_type_card hy_type_card_body">
+                  <span class="hy_type_label">Body</span>
+                  <span class="hy_type_name">New Science Mono</span>
+                </div>
+                <div
+                  class="hy_color_swatch hy_color_swatch_light"
+                  style="background-color: var(--hy-pale)">
+                  <span class="hy_color_hex">#E2F0FF</span>
+                </div>
+                <div
+                  class="hy_color_swatch"
+                  style="background-color: var(--hy-ink)">
+                  <span class="hy_color_hex">#010101</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Made for India's heat -->
+            <section class="casestudy_info">
+              <div class="casestudy_info_content">
+                <h2
+                  class="casestudy_info_heading casestudy_info_heading_hydro"
+                  style="text-transform: none">
+                  made for <span>India&rsquo;s heat</span>
+                </h2>
+                <div class="casestudy_info_text">
+                  <p>
+                    hydRo365 was created to make everyday hydration work harder for the way India
+                    actually lives. Founded by Rohit Sharma and developed with experts across sports
+                    performance, wellness and nutrition, the brand brings elite-level hydration for
+                    India. We designed the website to communicate a shift, from a sports-first
+                    product to an everyday performance essential for athletes, professionals,
+                    commuters and anyone navigating India’s heat, pace and demands.
+                  </p>
+                  <p>
+                    We built a website that balances the precision of performance science with a
+                    bold, energetic visual language - using a palette inspired by India’s heat,
+                    energy and sporting culture. The result is a user experience that feels easy,
+                    familiar, credible and high-performance.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <!-- Website & app showcase on blue -->
+            <section class="hy_panel hy_panel_showcase hy_panel_blue">
+              <div class="hy_showcase">
+                <figure class="hy_showcase_desktop">
+                  <img
+                    loading="lazy"
+                    src="../assets/images/hydro365/webp/hydro-showcase-1.webp"
+                    alt="hydRo 365 website — ingredients, FAQ and experts sections" />
+                </figure>
+                <figure class="hy_showcase_phone hy_showcase_phone_home">
+                  <img
+                    loading="lazy"
+                    src="../assets/images/hydro365/webp/hydro-showcase-2.webp"
+                    alt="hydRo 365 mobile home screen — Water Is Not Enough" />
+                </figure>
+                <figure class="hy_showcase_phone hy_showcase_phone_faq">
+                  <img
+                    loading="lazy"
+                    src="../assets/images/hydro365/webp/hydro-showcase-3.webp"
+                    alt="hydRo 365 mobile FAQ screen — Your questions, our answers" />
+                </figure>
+              </div>
+            </section>
+
+            <!-- Promo band -->
+            <section class="hy_panel_promo">
+              <img
+                class="hy_promo_img hy_promo_img_desktop"
+                src="../assets/images/hydro365/webp/hydro-promo.webp"
+                alt="hydRo 365 - formulated for Indian lifestyles, India's first hydration drink designed around our climate, pace and demands"
+                width="2160"
+                height="1169"
+                loading="lazy" />
+              <img
+                class="hy_promo_img hy_promo_img_mobile"
+                src="../assets/images/hydro365/webp/hydro-promo-mob.webp"
+                alt="hydRo 365 - formulated for Indian lifestyles, India's first hydration drink designed around our climate, pace and demands"
+                width="563"
+                height="1347"
+                loading="lazy" />
+            </section>
+
+            <!-- Marquee -->
+            <section
+              class="casestudy_tagline marquee3k"
+              data-speed="1.5"
+              data-reverse="false"
+              data-pausable="false">
+              <div class="casestudy_tagline_text">
+                <span
+                  class="text_style_1"
+                  style="text-transform: none"
+                  >for India.</span
+                >
+                <span class="text_style_2">hydration elevated.</span>
+                <span
+                  class="text_style_1"
+                  style="text-transform: none"
+                  >built for India.</span
+                >
+                <span class="text_style_2">hydration elevated.</span>
+              </div>
+            </section>
+
+            <!-- Footer Screens band -->
+            <section class="hy_panel hy_panel_ft_screens">
+              <img
+                loading="lazy"
+                class="hy_ft_bg"
+                src="../assets/images/hydro365/webp/hydro-ft-bg.webp"
+                alt="" />
+              <div class="hy_ft_shots">
+                <img
+                  loading="lazy"
+                  class="hy_ft_shot_mobile"
+                  src="../assets/images/hydro365/webp/hydro-ft-1.webp"
+                  alt="hydRo 365 footer on mobile"
+                  width="414"
+                  height="779" />
+                <img
+                  loading="lazy"
+                  class="hy_ft_shot_desktop"
+                  src="../assets/images/hydro365/webp/hydro-ft-2.webp"
+                  alt="hydRo 365 footer on desktop"
+                  width="1430"
+                  height="741" />
+              </div>
+            </section>
+
+            <!-- Inside India's performance culture -->
+            <section class="casestudy_info">
+              <div class="casestudy_info_content">
+                <h2
+                  class="casestudy_info_heading"
+                  style="max-width: none; text-transform: none">
+                  inside India's <span>performance culture</span>
+                </h2>
+                <div class="casestudy_info_text">
+                  <p>
+                    The visual language is built around blue - confident, energetic and unmistakably
+                    connected to hydration and sports, balanced with flashes of orange that bring in
+                    the heat and vibrancy of India. We kept the interface intentionally clean and
+                    direct no crowded UI, no unnecessary visual noise, and no over-explaining. The
+                    product and its efficacy stay at the centre, while bold colours, sharp layouts
+                    and considered white-space give the experience the confidence of an elite
+                    performance brand.
+                  </p>
+                  <p>
+                    Every detail works to reinforce the brand. Custom iconography creates a visual
+                    system that feels intuitive, energetic and science-backed, while giving the
+                    interface its own distinctive character.
+                  </p>
+                  <p>
+                    The result is a website that doesn’t preach about hydration; it makes the case
+                    for it.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <!-- Field shot + ticker -->
+            <section class="hy_panel_blue hy_panel_field">
+              <div class="hy_field_media">
+                <img
+                  class="hy_field_img hy_field_img_desktop"
+                  src="../assets/images/hydro365/webp/hydro-casestudy-4.webp"
+                  alt="hydRo 365 signup screen on a phone beside a cricket bat and ball"
+                  width="1649"
+                  height="788"
+                  loading="lazy" />
+                <img
+                  class="hy_field_img hy_field_img_mobile"
+                  src="../assets/images/hydro365/webp/hydro-casestudy-4-mobile.webp"
+                  alt="hydRo 365 signup screen on a phone beside a cricket bat and ball"
+                  width="525"
+                  height="447"
+                  loading="lazy" />
+              </div>
+              <div
+                class="hy_ticker marquee3k"
+                data-speed="1.2"
+                data-reverse="false"
+                data-pausable="false">
+                <div class="hy_ticker_text">
+                  <span class="hy_ticker_item">Built for Indian lifestyles</span>
+                  <span class="hy_ticker_dot"></span>
+                  <span class="hy_ticker_item">Science-backed</span>
+                  <span class="hy_ticker_dot"></span>
+                  <span class="hy_ticker_item">Built for Indian lifestyles</span>
+                  <span class="hy_ticker_dot"></span>
+                  <span class="hy_ticker_item">Science-backed</span>
+                  <span class="hy_ticker_dot"></span>
+                  <span class="hy_ticker_item">Built for Indian lifestyles</span>
+                  <span class="hy_ticker_dot"></span>
+                  <span class="hy_ticker_item">Science-backed</span>
+                  <span class="hy_ticker_dot"></span>
+                  <span class="hy_ticker_item">Built for Indian lifestyles</span>
+                  <span class="hy_ticker_dot"></span>
+                  <span class="hy_ticker_item">Science-backed</span>
+                  <span class="hy_ticker_dot"></span>
+                </div>
+              </div>
+            </section>
+
+            <!-- Daily hydration facts -->
+            <section class="hy_facts_panel">
+              <img
+                class="hy_facts_img hy_facts_img_desktop"
+                src="../assets/images/hydro365/webp/hydro-facts.webp"
+                alt="Daily hydration, used by elite performers - zero added sugar, six essential electrolytes, and the pour, mix and hydrate steps"
+                width="2160"
+                height="591"
+                loading="lazy" />
+              <img
+                class="hy_facts_img hy_facts_img_mobile"
+                src="../assets/images/hydro365/webp/hydro-facts-mob.webp"
+                alt="Daily hydration, used by elite performers - zero added sugar, six essential electrolytes, and the pour, mix and hydrate steps"
+                width="563"
+                height="590"
+                loading="lazy" />
+            </section>
+
+            <!-- A hydrating drink for everyone -->
+            <section class="hy_panel hy_everyone_panel">
+              <div class="hy_everyone">
+                <figure class="hy_everyone_card">
+                  <img
+                    loading="lazy"
+                    src="../assets/images/hydro365/hydro-casestudy-1.gif"
+                    alt="A Hydrating Drink Perfect for Everyone — audience cards" />
+                </figure>
+                <figure class="hy_everyone_laptop">
+                  <img
+                    loading="lazy"
+                    src="../assets/images/hydro365/webp/hydro-casestudy-2.webp"
+                    alt="hydRo 365 product page on a laptop" />
+                </figure>
+                <figure class="hy_everyone_phone">
+                  <img
+                    loading="lazy"
+                    src="../assets/images/hydro365/webp/hydro-casestudy-3.webp"
+                    alt="hydRo 365 Orange product page on mobile" />
+                </figure>
+              </div>
+            </section>
+
+            <!-- Custom iconography -->
+            <section class="hy_panel hy_icons">
+              <img
+                class="hy_icons_gif hy_icons_gif_desktop"
+                src="../assets/images/hydro365/hydro-iconography.gif"
+                alt="Custom iconography: dot-matrix icons cycling through the six essential electrolytes, Vitamin C and Zinc, B-vitamins, L-Theanine and the formula"
+                width="1920"
+                height="499"
+                loading="lazy" />
+              <img
+                class="hy_icons_gif hy_icons_gif_mobile"
+                src="../assets/images/hydro365/hydro-iconography-mobile.gif"
+                alt="Custom iconography: dot-matrix icons cycling through the six essential electrolytes, Vitamin C and Zinc, B-vitamins, L-Theanine and the formula"
+                width="351"
+                height="389"
+                loading="lazy" />
+            </section>
+
+            <section class="casestudy_nav_links">
+              <a
+                href="../houndstooth-recess/"
+                class="next_casestudy casestudy_nav_link">
+                <span>NEXT PROJECT</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="100"
+                  height="100"
+                  viewBox="0 0 100 100"
+                  fill="none">
+                  <path
+                    d="M21.125 49.7812H78.875"
+                    stroke="black"
+                    stroke-width="6"
+                    stroke-linejoin="round" />
+                  <path
+                    d="M50 20.9062L78.875 49.7812L50 78.6562"
+                    stroke="black"
+                    stroke-width="6"
+                    stroke-linejoin="round" />
+                </svg>
+              </a>
+              <a
+                href="../houndstooth-design-work/"
+                class="work_page casestudy_nav_link">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="99"
+                  height="100"
+                  viewBox="0 0 99 100"
+                  fill="none">
+                  <path
+                    d="M78.375 49.7812H20.625"
+                    stroke="black"
+                    stroke-width="6"
+                    stroke-linejoin="round" />
+                  <path
+                    d="M49.5 20.9062L20.625 49.7812L49.5 78.6562"
+                    stroke="black"
+                    stroke-width="6"
+                    stroke-linejoin="round" />
+                </svg>
+                <span>WORK</span>
+              </a>
+            </section>
+
+            <!-- Footer -->
+            <footer class="site_footer">
+              <div class="site_footer_middle">
+                <div class="ht_desc">
+                  This is the <br />
+                  footer.
+                  <span>
+                    <svg
+                      class="xl:hidden"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="114"
+                      height="113"
+                      viewBox="0 0 114 113"
+                      fill="none">
+                      <path
+                        d="M59.2839 112.04L47.1912 110.763L51.4756 61.8807L3.57705 72.5629L0.876959 60.9431L48.915 49.7048L23.5149 7.2297L33.9464 0.991738L59.3464 43.4669L91.9778 6.46497L100.937 14.342L68.5135 51.692L113.952 70.8402L109.007 82.3054L63.7078 62.601L59.2839 112.04Z"
+                        fill="white" />
+                    </svg>
+                    <svg
+                      class="hidden xl:block"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="233"
+                      height="228"
+                      viewBox="0 0 233 228"
+                      fill="none">
+                      <path
+                        d="M120.596 227.941L95.7806 225.321L104.573 125.008L6.27884 146.929L0.737904 123.084L99.3179 100.022L47.1939 12.8575L68.6004 0.0564628L120.724 87.2207L187.688 11.2882L206.073 27.4528L139.537 104.1L232.782 143.394L222.634 166.922L129.675 126.486L120.596 227.941Z"
+                        fill="white" />
+                    </svg>
+                  </span>
+                </div>
+                <div class="social_block">
+                  <nav class="social_nav">
+                    <a
+                      href="https://www.behance.net/houndstoothsc"
+                      target="_blank"
+                      >be</a
+                    >
+                    <a
+                      href="https://dribbble.com/Houndstooth"
+                      target="_blank"
+                      >db</a
+                    >
+                    <a
+                      href="https://www.instagram.com/houndstoothsc_official/"
+                      target="_blank"
+                      >ig</a
+                    >
+                    <a
+                      href="https://www.linkedin.com/company/houndstoothdesign/"
+                      target="_blank"
+                      >li</a
+                    >
+
+                    <div id="containers">
+                      <button class="face-button hidden">
+                        <span class="face-container">
+                          <span class="eye left"></span>
+                          <span class="eye right"></span>
+                          <span class="mouth"></span>
+                        </span>
+                      </button>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+              <div class="site_footer_bottom">
+                <nav class="footer_nav">
+                  <a href="../houndstooth-about-us/">
+                    About
+                    <span class="hover_line"></span>
+                  </a>
+                  <a href="../houndstooth-design-work/">
+                    Work
+                    <span class="hover_line"></span>
+                  </a>
+                  <a href="mailto:contact@houndstoothsc.com">
+                    Contact
+                    <span class="hover_line"></span>
+                  </a>
+                </nav>
+                <div class="footer_copyright">
+                  <p>Houndstooth 2023</p>
+                </div>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- JavaScript -->
+    <!-- <script src="../assets/js/loader.min.js" defer></script> -->
+    <script
+      src="../assets/js/lozad.min.js"
+      defer></script>
+    <script
+      src="../assets/js/gsap.min.js"
+      defer></script>
+    <script
+      src="../assets/js/ScrollTrigger.min.js"
+      defer></script>
+    <script
+      src="../assets/js/marquee3k.min.js"
+      defer></script>
+    <script
+      src="../assets/js/scrollSmoother.min.js"
+      defer></script>
+    <script
+      src="../assets/js/flickity.min.js"
+      defer></script>
+    <script
+      src="../assets/js/main.js"
+      defer></script>
+    <script
+      src="../assets/js/casestudy.js"
+      defer></script>
+  </body>
+</html>
